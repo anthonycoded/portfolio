@@ -6,7 +6,7 @@ const Header = () => {
     <div className=" bg-yellow-400 h-96 w-96 inset-y-0 right-0 flex flex-col fixed">
       <div className="flex h-12 justify-between items-center">
         <a href="/">
-          <h1 className="pl-4 font-bold text-2xl">Webpack React TailwindCSS</h1>
+          <h1 className="pl-4 font-bold text-2xl">Shawn Barbel</h1>
         </a>
         <button className="h-8 w-8 font-bold" onClick={() => setOpen(!open)}>
           X
@@ -32,11 +32,11 @@ const Header = () => {
     </div>
   );
   return (
-    <div className="h-12 w-full flex flex-col">
-      <div className="h-12 flex justify-between items-center bg-gray-800 w-full px-2 fixed">
+    <div className="h-full w-full flex flex-col">
+      <div className="h-12 flex justify-between items-center bg-material-purple w-full px-2 fixed">
         <a href="/">
-          <h1 className="pl-4 text-yellow-400 font-bold text-2xl">
-            {open ? undefined : "Webpack React TailwindCSS"}
+          <h1 className="pl-4 text-material-blue font-bold text-2xl">
+            {open ? undefined : <p className="text-black"><span className="text-material-blue">Shawn</span>Barbel</p>}
           </h1>
         </a>
         <button className="" onClick={() => setOpen(!open)}>
