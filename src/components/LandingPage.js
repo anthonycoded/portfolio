@@ -71,7 +71,7 @@ const LandingPage = () => {
       </div>
       <div className="h-full w-full flex flex-col p-4 space-y-12">
         <p className="text-3xl text-black font-bold text-left mb-4">Projects</p>
-        <div className="h-full p-2 space-y-4">
+        <div className="h-full p-2 lg:px-24">
           <p className="text-2xl font-bold text-yellow-400">BeatDealers</p>
           <p className="p-2">
             The goal of this project is to lease and sell beats to artist. It
@@ -79,8 +79,10 @@ const LandingPage = () => {
             uploading and downloading.
           </p>
 
-          <p className="text-xl font-medium text-yellow-400 p-2">Screenshots:</p>
-          <div className="flex overflow-x-scroll w-full space-x-8 p-4">
+          <p className="text-xl font-medium text-yellow-400 p-2">
+            Screenshots:
+          </p>
+          <div className="flex overflow-x-scroll w-full space-x-8 p-4 xl:overflow-hidden xl:justify-center">
             <img src={bdlandingpage} alt="" className="w-60"></img>
             <img src={bdmediaplayer} alt="" className="w-60"></img>
             <img src={bdlogin} alt="" className="w-60"></img>
@@ -90,7 +92,7 @@ const LandingPage = () => {
           </p>
         </div>
 
-        <div className="h-full p-2">
+        <div className="h-full p-2 lg:px-24">
           <p className="text-2xl font-bold text-blue-400">Wishlist</p>
           <p className="p-2">
             The goal of this project is to lease and sell beats to artist. It
@@ -98,7 +100,7 @@ const LandingPage = () => {
             uploading and downloading.
           </p>
           <p className="text-xl font-medium text-blue-400 p-2">Screenshots:</p>
-          <div className="flex overflow-x-scroll w-full space-x-8 p-4">
+          <div className="flex overflow-x-scroll w-full space-x-8 p-4 lg:overflow-hidden lg:justify-center">
             <img src={adminwishlist} alt="" className="w-60"></img>
             <img src={newproduct} alt="" className="w-60"></img>
           </div>
@@ -107,7 +109,7 @@ const LandingPage = () => {
           </p>
         </div>
 
-        <div className="h-full p-2">
+        <div className="h-full p-2 lg:px-24">
           <p className="text-2xl font-bold text-red-400">Covid Tracker</p>
           <p className="p-2">
             The goal of this project is to lease and sell beats to artist. It
@@ -115,7 +117,7 @@ const LandingPage = () => {
             uploading and downloading.
           </p>
           <p className="text-xl font-medium text-red-400 p-2">Screenshots:</p>
-          <div className="flex overflow-x-scroll w-full space-x-8 p-4">
+          <div className="flex overflow-x-scroll w-full space-x-8 p-4 lg:overflow-hidden lg:justify-center">
             <img src={covidtracker} alt="" className="w-60"></img>
             <img src={numbers} alt="" className="w-60"></img>
             <img src={map} alt="" className="w-60"></img>
