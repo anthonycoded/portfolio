@@ -9,6 +9,7 @@ import bdlandingpage from "../assets/bdlandingpage.png";
 import bdlogin from "../assets/bdlogin.png";
 import newproduct from "../assets/newproduct.png";
 import numbers from "../assets/numbers.png";
+import cart from "../assets/cart.svg";
 
 const LandingPage = () => {
   return (
@@ -36,107 +37,127 @@ const LandingPage = () => {
           </button>
         </div>
       </div>
-      <div className="h-full w-full flex flex-col bg-blue-400 p-4 space-y-16">
+      <div className="h-full w-full flex flex-col bg-material-blue p-4 space-y-16">
         <p className="text-2xl text-black font-bold text-left mb-4">
           What I can Do
         </p>
-        <div className="w-full h-full flex justify-between">
-          <div className="rounded-xl bg-yellow-400 h-20 w-36 justify-center items-center p-4">
-            <p className="text-center font-medium">E-Commerce</p>
+        <div className="w-full h-full grid grid-cols-2 justify-content-center gap-12 pb-12">
+          <div className="flex flex-col justify-center">
+            <img src={cart} alt="" className="h-20"></img>
+            <p className="text-center text-2xl font-bold">E-commerce</p>
           </div>
-
-          <p className="text-center font-medium w-60">
-            Need to sell products online?Need to sell products online?Need to
-            sell products online?Need
-          </p>
-        </div>
-
-        <div className="h-full w-full flex justify-between">
-          <div className="rounded-xl bg-red-400 h-20 w-36 flex justify-center items-center p-4">
-            <p className="text-center font-medium">Content Management</p>
+          <div className="flex flex-col justify-center">
+            <img src={cart} alt="" className="h-20"></img>
           </div>
-
-          <p className="text-center font-medium w-60">
-            Need to sell products online?Need to sell products online?Need to
-            sell products online?Need to sell products on
-          </p>
-        </div>
-        <div className="w-full h-full flex justify-between">
-          <div className="rounded-xl bg-green-400 h-20 w-36 flex justify-center items-center p-4">
-            <p className="text-center font-medium">CRM</p>
+          <div className="flex flex-col justify-center">
+            <img src={cart} alt="" className="h-20"></img>
           </div>
-
-          <p className="text-center font-medium w-60">
-            Need to sell products online?Need to sell products online?Need to
-            sell products online?Need to sell products on
-          </p>
-        </div>
-        <div className="w-full h-full flex justify-between mb-12">
-          <div className="rounded-xl bg-pink-400 h-20 w-36 mb-4  justify-center items-center p-4">
-            <p className="text-center font-medium">Music Streaming</p>
+          <div className="flex flex-col justify-center">
+            <img src={cart} alt="" className="h-20"></img>
           </div>
-
-          <p className="text-center font-medium w-60 mb-12">
-            Need to sell products online?Need to sell products online?Need to
-            sell products online?Need to sell products on
-          </p>
+          <div className="flex flex-col justify-center">
+            <img src={cart} alt="" className="h-20"></img>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img src={cart} alt="" className="h-20"></img>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img src={cart} alt="" className="h-20"></img>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img src={cart} alt="" className="h-20"></img>
+          </div>
         </div>
       </div>
       <div className="h-full w-full flex flex-col p-4 space-y-12">
-        <p className="text-3xl text-black font-bold text-left mb-12">
-          Projects
-        </p>
-        <div className="h-full p-4 space-y-4">
-          <div>
-            <p className="text-2xl font-bold text-yellow-400">BeatDealers</p>
-            <p className="">
-              The goal of this project is to lease and sell beats to artist. It
-              includes audio streaming, authentication, payment processing, file
-              uploading and downloading.
-            </p>
-          </div>
-          <p className="text-md font-medium ">Screenshots:</p>
+        <p className="text-3xl text-black font-bold text-left mb-4">Projects</p>
+        <div className="h-full p-2 space-y-4">
+          <p className="text-2xl font-bold text-yellow-400">BeatDealers</p>
+          <p className="p-2">
+            The goal of this project is to lease and sell beats to artist. It
+            includes audio streaming, authentication, payment processing, file
+            uploading and downloading.
+          </p>
+
+          <p className="text-xl font-medium text-yellow-400 p-2">Screenshots:</p>
           <div className="flex overflow-x-scroll w-full space-x-8 p-4">
             <img src={bdlandingpage} alt="" className="w-60"></img>
             <img src={bdmediaplayer} alt="" className="w-60"></img>
             <img src={bdlogin} alt="" className="w-60"></img>
           </div>
-          <p className="text-xl font-medium">
+          <p className="text-xl font-medium p-4 text-center w-full">
             Technologies used: MERN Stack, JWT, Google Cloud Platform, Stripe
           </p>
         </div>
 
-        <div className="h-full">
+        <div className="h-full p-2">
           <p className="text-2xl font-bold text-blue-400">Wishlist</p>
-          <div className="flex overflow-x-scroll w-full space-x-8 p-4">
-            <img src={adminwishlist} alt="" className="w-60"></img>
-            <img src={newproduct} alt="" className="w-60"></img>
-          </div>
-          <p className="p-4 text-xl font-medium">
-            Technologies used: MERN Stack, Google Cloud Platform, Stripe
-          </p>
-          <p className="p-4">
+          <p className="p-2">
             The goal of this project is to lease and sell beats to artist. It
             includes audio streaming, authentication, payment processing, file
             uploading and downloading.
           </p>
+          <p className="text-xl font-medium text-blue-400 p-2">Screenshots:</p>
+          <div className="flex overflow-x-scroll w-full space-x-8 p-4">
+            <img src={adminwishlist} alt="" className="w-60"></img>
+            <img src={newproduct} alt="" className="w-60"></img>
+          </div>
+          <p className="p-4 text-xl font-medium text-center">
+            Technologies used: MERN Stack, Google Cloud Platform, Stripe
+          </p>
         </div>
 
-        <div className="h-full">
+        <div className="h-full p-2">
           <p className="text-2xl font-bold text-red-400">Covid Tracker</p>
+          <p className="p-2">
+            The goal of this project is to lease and sell beats to artist. It
+            includes audio streaming, authentication, payment processing, file
+            uploading and downloading.
+          </p>
+          <p className="text-xl font-medium text-red-400 p-2">Screenshots:</p>
           <div className="flex overflow-x-scroll w-full space-x-8 p-4">
             <img src={covidtracker} alt="" className="w-60"></img>
             <img src={numbers} alt="" className="w-60"></img>
             <img src={map} alt="" className="w-60"></img>
           </div>
-          <p className="p-4 text-xl font-medium">
+          <p className="p-4 text-xl font-medium text-center w-full">
             Technologies used: MERN Stack, Google Cloud Platform, Stripe
           </p>
-          <p className="p-4">
-            The goal of this project is to lease and sell beats to artist. It
-            includes audio streaming, authentication, payment processing, file
-            uploading and downloading.
-          </p>
+        </div>
+      </div>
+      <div className="h-full w-full bg-material-purple p-8 text-3xl font-bold">
+        <p className="text-center text-material-blue mb-8">Technologies</p>
+        <div className="grid grid-cols-5 h-full w-full gap-8">
+          <div className="flex flex-col justify-center">
+            <img src={cart} alt="" className="h-20"></img>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img src={cart} alt="" className="h-20"></img>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img src={cart} alt="" className="h-20"></img>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img src={cart} alt="" className="h-20"></img>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img src={cart} alt="" className="h-20"></img>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img src={cart} alt="" className="h-20"></img>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img src={cart} alt="" className="h-20"></img>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img src={cart} alt="" className="h-20"></img>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img src={cart} alt="" className="h-20"></img>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img src={cart} alt="" className="h-20"></img>
+          </div>
         </div>
       </div>
     </div>
