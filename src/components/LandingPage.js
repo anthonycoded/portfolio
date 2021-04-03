@@ -2,6 +2,7 @@ import React from "react";
 
 import avatar from "../assets/avatar.jpg";
 import adminwishlist from "../assets/adminwishlist.png";
+import authentication from "../assets/authentication.svg";
 import covidtracker from "../assets/covidtracker.png";
 import map from "../assets/map.png";
 import bdmediaplayer from "../assets/bdmediaplayer.png";
@@ -9,7 +10,13 @@ import bdlandingpage from "../assets/bdlandingpage.png";
 import bdlogin from "../assets/bdlogin.png";
 import newproduct from "../assets/newproduct.png";
 import numbers from "../assets/numbers.png";
-import cart from "../assets/cart.svg";
+import cart from "../assets/shopping-cart.svg";
+import content from "../assets/content.svg";
+import payments from "../assets/credit-card.svg";
+import stats from "../assets/stats.svg";
+import orderfood from "../assets/order-food.svg";
+import socialmedia from "../assets/social-media.svg";
+import chat from "../assets/speech-bubble.svg";
 
 const LandingPage = () => {
   return (
@@ -39,33 +46,41 @@ const LandingPage = () => {
       </div>
       <div className="h-full w-full flex flex-col bg-material-blue p-4 space-y-16">
         <p className="text-2xl text-black font-bold text-left mb-4">
-          What I can Do
+          Online Solutions
         </p>
         <div className="w-full h-full grid grid-cols-2 justify-content-center gap-12 pb-12">
           <div className="flex flex-col justify-center">
             <img src={cart} alt="" className="h-20"></img>
-            <p className="text-center text-2xl font-bold">E-commerce</p>
+            <p className="text-center text-xl font-bold">E-commerce</p>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img src={content} alt="" className="h-20"></img>
+            <p className="text-center text-xl font-bold">Content Management</p>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img src={payments} alt="" className="h-20"></img>
+            <p className="text-center text-xl font-bold">Payment Processing</p>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img src={orderfood} alt="" className="h-20"></img>
+            <p className="text-center text-xl font-bold">Mobile Ordering</p>
+          </div>
+
+          <div className="flex flex-col justify-center">
+            <img src={stats} alt="" className="h-20"></img>
+            <p className="text-center text-xl font-bold">Analytics</p>
+          </div>
+          <div className="flex flex-col justify-center">
+            <img src={socialmedia} alt="" className="h-20"></img>
+            <p className="text-center text-xl font-bold">Social Media</p>
           </div>
           <div className="flex flex-col justify-center">
             <img src={cart} alt="" className="h-20"></img>
+            <p className="text-center text-xl font-bold">Instant Messaging</p>
           </div>
           <div className="flex flex-col justify-center">
-            <img src={cart} alt="" className="h-20"></img>
-          </div>
-          <div className="flex flex-col justify-center">
-            <img src={cart} alt="" className="h-20"></img>
-          </div>
-          <div className="flex flex-col justify-center">
-            <img src={cart} alt="" className="h-20"></img>
-          </div>
-          <div className="flex flex-col justify-center">
-            <img src={cart} alt="" className="h-20"></img>
-          </div>
-          <div className="flex flex-col justify-center">
-            <img src={cart} alt="" className="h-20"></img>
-          </div>
-          <div className="flex flex-col justify-center">
-            <img src={cart} alt="" className="h-20"></img>
+            <img src={authentication} alt="" className="h-20"></img>
+            <p className="text-center text-xl font-bold">Authentication</p>
           </div>
         </div>
       </div>
