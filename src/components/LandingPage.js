@@ -17,10 +17,14 @@ import stats from "../assets/stats.svg";
 import orderfood from "../assets/order-food.svg";
 import socialmedia from "../assets/social-media.svg";
 import chat from "../assets/speech-bubble.svg";
+import business from "../assets/undraw_business.svg";
+import cube from "../assets/undraw_cube.svg";
+import winners from "../assets/undraw_winners.svg";
+import down from "../assets/down-arrow.svg";
 
 const LandingPage = () => {
   return (
-    <div className="h-full flex flex-col justify-center items-center space-y-4">
+    <div className="h-full flex flex-col justify-center items-center mt-8">
       <div className="h-full flex justify-center p-4 pt-8">
         <p className="font-bold text-4xl text-black text-center mt-14 capitalize">
           Hello World, <br></br> my name is{" "}
@@ -42,6 +46,37 @@ const LandingPage = () => {
           <button className="h-12 rounded-xl font-medium bg-material-blue w-28 mb-8">
             Hire Me
           </button>
+        </div>
+      </div>
+      <div className="h-full w-full bg-material-purple flex flex-col items-center p-8">
+        <p className="text-2xl text-left w-full mb-4 font-bold">
+          What I do is simple
+        </p>
+        <p className="text-white font-medium text-xl mb-8">
+          I Create online business solutions that empowers a company to not only
+          grow but also thrive in todays competitve world.
+        </p>
+        <div className="flex flex-col w-full space-y-12 p-4">
+          <div className="flex w-full justify-start items-center space-x-4">
+            <p className="text-white text-xl font-bold w-32">
+              Create Custom Solutions
+            </p>
+            <img src={cube} alt="" className="h-24"></img>
+          </div>
+          <img src={down} alt="" className="h-12"></img>
+          <div className="flex items-center justify-end w-full space-x-4">
+            <img src={business} alt="" className="h-24"></img>
+            <p className="text-white text-xl font-bold w-32">
+              Empower your business to grow
+            </p>
+          </div>
+          <img src={down} alt="" className="h-12"></img>
+          <div className="flex justify-start items-center space-x-4 w-full">
+            <p className="text-white text-xl font-bold w-32">
+              Compete and succeed!
+            </p>
+            <img src={winners} alt="" className="h-24"></img>
+          </div>
         </div>
       </div>
       <div className="h-full w-full flex flex-col bg-material-blue p-4 space-y-16">
@@ -75,7 +110,7 @@ const LandingPage = () => {
             <p className="text-center text-xl font-bold">Social Media</p>
           </div>
           <div className="flex flex-col justify-center">
-            <img src={cart} alt="" className="h-20"></img>
+            <img src={chat} alt="" className="h-20"></img>
             <p className="text-center text-xl font-bold">Instant Messaging</p>
           </div>
           <div className="flex flex-col justify-center">
