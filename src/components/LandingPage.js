@@ -22,6 +22,16 @@ import cube from "../assets/solutions.svg";
 import winners from "../assets/winners.svg";
 import down from "../assets/down-arrow.svg";
 import Github from "../assets/github.png";
+import wavebg from "../assets/wavebg.svg";
+import css from "../assets/css.svg";
+import html from "../assets/html-5.svg";
+import js from "../assets/javascript.svg";
+import reactlogo from "../assets/react-icon.svg";
+import twcss from "../assets/tailwindcss-icon.svg";
+import mui from "../assets/material-ui.svg";
+import bootstrap from "../assets/Bootstrap_logo.svg";
+import webpackcube from "../assets/webpackcube.svg";
+import devices from "../assets/devices.svg";
 
 const LandingPage = () => {
   return (
@@ -54,10 +64,17 @@ const LandingPage = () => {
         <div className="h-full flex flex-col items-center p-4">
           <p className="mb-2">Need help with your website?</p>
           <button className="h-12 rounded-xl font-medium bg-material-blue w-28 mb-8">
-            Hire Me
+            Contact Me
           </button>
         </div>
       </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#aa00ff"
+          fill-opacity="1"
+          d="M0,128L48,144C96,160,192,192,288,176C384,160,480,96,576,69.3C672,43,768,53,864,90.7C960,128,1056,192,1152,224C1248,256,1344,256,1392,256L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
       <div className="h-full w-full bg-material-purple flex flex-col items-center p-8">
         <p className="text-2xl text-left w-full mb-4 font-bold">
           What I do is simple
@@ -89,6 +106,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+
       <div className="h-full w-full flex flex-col bg-material-blue p-4 space-y-16">
         <p className="text-2xl text-black font-bold text-left mb-4">
           Online Solutions
@@ -129,6 +147,13 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#00e5ff"
+          fill-opacity="1"
+          d="M0,64L48,85.3C96,107,192,149,288,160C384,171,480,149,576,122.7C672,96,768,64,864,53.3C960,43,1056,53,1152,80C1248,107,1344,149,1392,170.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
+        ></path>
+      </svg>
       <div className="h-full w-full flex flex-col p-4 space-y-12">
         <p className="text-3xl text-black font-bold text-left mb-4">Projects</p>
         <div className="h-full p-2 lg:px-24">
@@ -187,54 +212,78 @@ const LandingPage = () => {
           </p>
         </div>
       </div>
-      <div className="h-full w-full bg-material-purple p-8 text-3xl font-bold">
-        <p className="text-center text-material-blue mb-8">Technologies</p>
-        <div className="flex flex-col h-full w-full gap-8">
-          <div className="flex justify-start space-x-8 w-full">
-            <div className="flex flex-col justify-start">
-              <img src={cart} alt="" className="h-20"></img>
-              <p className="text-base text-white font-medium">HTML5</p>
+      <div
+        className="h-full w-full"
+        style={{
+          backgroundImage: `url(${wavebg})`,
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
+        <div className="p-8">
+          <p className="text-center text-material-blue mb-12 text-2xl font-bold">
+            Technologies
+          </p>
+          <div className="flex flex-col h-full w-full gap-8">
+            <div className="flex justify-between items-center space-x-8 w-full h-full mb-8">
+              <div className="flex items-center w-72 justify-between">
+                <div className="flex flex-col items-center justify-center h-full">
+                  <img src={html} alt="" className="h-16"></img>
+                  <p className="text-base text-white font-medium">HTML5</p>
+                </div>
+                <div className="flex flex-col justify-center items-center h-full">
+                  <img
+                    src={css}
+                    alt=""
+                    className="h-16 w-to bg-white rounded-full"
+                  ></img>
+                  <p className="text-base text-white font-medium">CSS</p>
+                </div>
+              </div>
+              <div className="w-full flex flex-col items-end h-full space-y-4">
+                <div className="flex items-center space-x-2">
+                  <img src={bootstrap} alt="" className="h-7 "></img>
+                  <p className="">Bootstrap</p>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <img
+                    src={mui}
+                    alt=""
+                    className="h-7 w-7 rounded-full bg-white"
+                  ></img>
+                  <p className="">Material-UI</p>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <img
+                    src={twcss}
+                    alt=""
+                    className="h-7 rounded-full bg-white"
+                  ></img>
+                  <p className="TailwindCSS">Tailwind</p>
+                </div>
+              </div>
             </div>
-            <div className="flex flex-col justify-center">
-              <img src={cart} alt="" className="h-20"></img>
-              <p className="text-base text-white font-medium">CSS</p>
-            </div>
-          </div>
-          <div className="w-full flex justify-end">
-            <p className="text-sm text-white h-12">Bootstrap</p>
-            <p className="text-sm text-white h-12">Material-UI</p>
-            <p className="text-sm text-white h-12">TailwindCSS</p>
-          </div>
 
-          <div className="flex items-center">
-            <div className="flex flex-col">
-              <img src={cart} alt="" className="h-20"></img>
-              <p className="text-base text-white font-medium">Javascript</p>
+            <div className="flex items-center p-4 justify-between">
+              <div className="flex flex-col items-center justify-center w-full h-full">
+                <img src={js} alt="" className="h-20"></img>
+                <p className="text-base text-white font-medium">Javascript</p>
+              </div>
+              <div className="items-end w-full grid grid-cols-2 justify-items-center content-center pl-16">
+                <p className="text-sm text-white h-12">Vanilla</p>
+                <p className="text-sm text-white h-12">React</p>
+                <p className="text-sm text-white h-12">ESNext</p>
+                <p className="text-sm text-white h-12">AJAX</p>
+                <p className="text-sm text-white h-12">JSON</p>
+                <p className="text-sm text-white h-12">DOM</p>
+              </div>
             </div>
-            <div className="flex flex-col items-end w-full">
-              <p className="text-sm text-white h-12">Vanilla</p>
-              <p className="text-sm text-white h-12">React</p>
-              <p className="text-sm text-white h-12">ESNext</p>
-            </div>
-          </div>
 
-          <div className="flex flex-col justify-center">
-            <img src={cart} alt="" className="h-20"></img>
-          </div>
-          <div className="flex flex-col justify-center">
-            <img src={cart} alt="" className="h-20"></img>
-          </div>
-          <div className="flex flex-col justify-center">
-            <img src={cart} alt="" className="h-20"></img>
-          </div>
-          <div className="flex flex-col justify-center">
-            <img src={cart} alt="" className="h-20"></img>
-          </div>
-          <div className="flex flex-col justify-center">
-            <img src={cart} alt="" className="h-20"></img>
-          </div>
-          <div className="flex flex-col justify-center">
-            <img src={cart} alt="" className="h-20"></img>
+            <div className="flex flex-col items-center">
+              <img src={webpackcube} alt="" className="h-20"></img>
+              <p className="text-xl font-bold text-white">Webpack</p>
+            </div>
           </div>
         </div>
       </div>
