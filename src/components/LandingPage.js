@@ -143,9 +143,9 @@ const LandingPage = () => {
             Screenshots:
           </p>
           <div className="flex overflow-x-scroll w-full space-x-8 p-4 xl:overflow-hidden xl:justify-center">
-            <img src={bdlandingpage} alt="" className="w-full h-96"></img>
-            <img src={bdmediaplayer} alt="" className="w-w-full h-96"></img>
-            <img src={bdlogin} alt="" className="w-full h-96"></img>
+            <img src={bdlandingpage} alt="" className=" h-96"></img>
+            <img src={bdmediaplayer} alt="" className=" h-96"></img>
+            <img src={bdlogin} alt="" className=" h-96"></img>
           </div>
           <p className="text-xl font-medium p-4 text-center w-full">
             Technologies used: MERN Stack, JWT, Google Cloud Platform, Stripe
@@ -161,8 +161,8 @@ const LandingPage = () => {
           </p>
           <p className="text-xl font-medium text-blue-400 p-2">Screenshots:</p>
           <div className="flex overflow-x-scroll w-full space-x-8 p-4 lg:overflow-hidden lg:justify-center">
-            <img src={adminwishlist} alt="" className="w-full h-96"></img>
-            <img src={newproduct} alt="" className="w-full h-96"></img>
+            <img src={adminwishlist} alt="" className="h-96"></img>
+            <img src={newproduct} alt="" className="h-96"></img>
           </div>
           <p className="p-4 text-xl font-medium text-center">
             Technologies used: MERN Stack, Google Cloud Platform, Stripe
@@ -177,10 +177,10 @@ const LandingPage = () => {
             uploading and downloading.
           </p>
           <p className="text-xl font-medium text-red-400 p-2">Screenshots:</p>
-          <div className="flex overflow-x-scroll w-full space-x-8 p-4 lg:overflow-hidden lg:justify-center">
-            <img src={covidtracker} alt="" className="w-full h-96"></img>
-            <img src={numbers} alt="" className="w-full h-96"></img>
-            <img src={map} alt="" className="w-full h-96"></img>
+          <div className="flex overflow-x-scroll w-full space-x-8 p-4 lg:overflow-hidden md:justify-center">
+            <img src={covidtracker} alt="" className="h-96"></img>
+            <img src={numbers} alt="" className="h-96"></img>
+            <img src={map} alt="" className="h-96"></img>
           </div>
           <p className="p-4 text-xl font-medium text-center w-full">
             Technologies used: MERN Stack, Google Cloud Platform, Stripe
