@@ -179,19 +179,35 @@ const LandingPage = () => {
       </div>
       <div className="h-full w-full bg-material-purple p-8 text-3xl font-bold">
         <p className="text-center text-material-blue mb-8">Technologies</p>
-        <div className="grid grid-cols-5 h-full w-full gap-8">
-          <div className="flex flex-col justify-center">
-            <img src={cart} alt="" className="h-20"></img>
+        <div className="flex flex-col h-full w-full gap-8">
+          <div className="flex justify-start space-x-8 w-full">
+            <div className="flex flex-col justify-start">
+              <img src={cart} alt="" className="h-20"></img>
+              <p className="text-base text-white font-medium">HTML5</p>
+            </div>
+            <div className="flex flex-col justify-center">
+              <img src={cart} alt="" className="h-20"></img>
+              <p className="text-base text-white font-medium">CSS</p>
+            </div>
           </div>
-          <div className="flex flex-col justify-center">
-            <img src={cart} alt="" className="h-20"></img>
+          <div className="w-full flex justify-end">
+            <p className="text-sm text-white h-12">Bootstrap</p>
+            <p className="text-sm text-white h-12">Material-UI</p>
+            <p className="text-sm text-white h-12">TailwindCSS</p>
           </div>
-          <div className="flex flex-col justify-center">
-            <img src={cart} alt="" className="h-20"></img>
+
+          <div className="flex items-center">
+            <div className="flex flex-col">
+              <img src={cart} alt="" className="h-20"></img>
+              <p className="text-base text-white font-medium">Javascript</p>
+            </div>
+            <div className="flex flex-col items-end w-full">
+              <p className="text-sm text-white h-12">Vanilla</p>
+              <p className="text-sm text-white h-12">React</p>
+              <p className="text-sm text-white h-12">ESNext</p>
+            </div>
           </div>
-          <div className="flex flex-col justify-center">
-            <img src={cart} alt="" className="h-20"></img>
-          </div>
+
           <div className="flex flex-col justify-center">
             <img src={cart} alt="" className="h-20"></img>
           </div>
