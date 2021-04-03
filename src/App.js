@@ -8,8 +8,8 @@ import LandingPage from "./components/LandingPage";
 const App = () => {
   return (
     <div className="h-full">
-      <Header className="display-block"></Header>
       <Router>
+        <Header className="display-block"></Header>
         <Switch>
           <Route path="/">
             <LandingPage></LandingPage>

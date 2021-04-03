@@ -18,9 +18,10 @@ import orderfood from "../assets/order-food.svg";
 import socialmedia from "../assets/social-media.svg";
 import chat from "../assets/speech-bubble.svg";
 import business from "../assets/undraw_business.svg";
-import cube from "../assets/undraw_cube.svg";
-import winners from "../assets/undraw_winners.svg";
+import cube from "../assets/solutions.svg";
+import winners from "../assets/winners.svg";
 import down from "../assets/down-arrow.svg";
+import Github from "../assets/github.png";
 
 const LandingPage = () => {
   return (
@@ -40,6 +41,15 @@ const LandingPage = () => {
           <p className="text-xl text-gray-500 font-medium mb-4">
             Solution Creator
           </p>
+          <img src={Github} className="h-12 mb-4" alt=""></img>
+          <a
+            href="https://twitter.com/ShawnBarbel?ref_src=twsrc%5Etfw"
+            className="twitter-follow-button"
+            data-size="large"
+            data-show-count="false"
+          >
+            Follow @ShawnBarbel
+          </a>
         </div>
         <div className="h-full flex flex-col items-center p-4">
           <p className="mb-2">Need help with your website?</p>
@@ -133,9 +143,9 @@ const LandingPage = () => {
             Screenshots:
           </p>
           <div className="flex overflow-x-scroll w-full space-x-8 p-4 xl:overflow-hidden xl:justify-center">
-            <img src={bdlandingpage} alt="" className="w-60"></img>
-            <img src={bdmediaplayer} alt="" className="w-60"></img>
-            <img src={bdlogin} alt="" className="w-60"></img>
+            <img src={bdlandingpage} alt="" className="w-full h-96"></img>
+            <img src={bdmediaplayer} alt="" className="w-w-full h-96"></img>
+            <img src={bdlogin} alt="" className="w-full h-96"></img>
           </div>
           <p className="text-xl font-medium p-4 text-center w-full">
             Technologies used: MERN Stack, JWT, Google Cloud Platform, Stripe
@@ -151,8 +161,8 @@ const LandingPage = () => {
           </p>
           <p className="text-xl font-medium text-blue-400 p-2">Screenshots:</p>
           <div className="flex overflow-x-scroll w-full space-x-8 p-4 lg:overflow-hidden lg:justify-center">
-            <img src={adminwishlist} alt="" className="w-60"></img>
-            <img src={newproduct} alt="" className="w-60"></img>
+            <img src={adminwishlist} alt="" className="w-full h-96"></img>
+            <img src={newproduct} alt="" className="w-full h-96"></img>
           </div>
           <p className="p-4 text-xl font-medium text-center">
             Technologies used: MERN Stack, Google Cloud Platform, Stripe
@@ -168,9 +178,9 @@ const LandingPage = () => {
           </p>
           <p className="text-xl font-medium text-red-400 p-2">Screenshots:</p>
           <div className="flex overflow-x-scroll w-full space-x-8 p-4 lg:overflow-hidden lg:justify-center">
-            <img src={covidtracker} alt="" className="w-60"></img>
-            <img src={numbers} alt="" className="w-60"></img>
-            <img src={map} alt="" className="w-60"></img>
+            <img src={covidtracker} alt="" className="w-full h-96"></img>
+            <img src={numbers} alt="" className="w-full h-96"></img>
+            <img src={map} alt="" className="w-full h-96"></img>
           </div>
           <p className="p-4 text-xl font-medium text-center w-full">
             Technologies used: MERN Stack, Google Cloud Platform, Stripe
