@@ -34,7 +34,9 @@ import webpackcube from "../assets/webpackcube.svg";
 import devices from "../assets/devices.svg";
 import gcloud from "../assets/gcloud.png";
 import nodejs from "../assets/nodejs.svg";
-import mongodb from "../assets/mongodb.png"
+import mongodb from "../assets/mongodb.png";
+import python from "../assets/python.svg";
+import graphql from "../assets/graphql.svg";
 
 const LandingPage = () => {
   return (
@@ -78,15 +80,17 @@ const LandingPage = () => {
           d="M0,128L48,144C96,160,192,192,288,176C384,160,480,96,576,69.3C672,43,768,53,864,90.7C960,128,1056,192,1152,224C1248,256,1344,256,1392,256L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
       </svg>
-      <div className="h-full w-full bg-material-purple flex flex-col items-center p-8 space-y-8">
-        <p className="text-2xl text-left w-full mb-4 font-bold">
-          What I do is simple
-        </p>
-        <p className="text-white font-medium text-xl mb-20">
-          I Create online business solutions that empowers a company to not only
-          grow but also thrive in todays competitve world.
-        </p>
-        <div className="flex flex-col w-full h-full space-y-16 p-4 mt-12">
+      <div className="h-full w-full bg-material-purple flex flex-col items-start p-8 space-y-9 md:px-24">
+        <div className=" h-full ">
+          <p className="text-3xl text-left w-full mb-4 font-bold">
+            What I do is simple
+          </p>
+          <p className="text-white font-medium text-xl mb-32 w-72 text-left">
+            I Create online business solutions that empowers a company to not
+            only grow but also thrive in todays competitve world.
+          </p>
+        </div>
+        <div className="w-full h-full flex flex-col space-y-16 p-4 mt-12 md:flex-row md:items-center md:mt-32 md:space-y-0">
           <div className="flex w-full h-full justify-start items-center space-x-4">
             <p className="text-white text-xl font-bold w-32">
               Create Custom Solutions
@@ -110,7 +114,7 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="h-full w-full flex flex-col bg-material-blue p-4 space-y-16">
+      <div className="h-full w-full flex flex-col bg-material-blue p-4 space-y-16 md:px-24 md:py-12">
         <p className="text-2xl text-black font-bold text-left mb-4">
           Online Solutions
         </p>
@@ -157,7 +161,7 @@ const LandingPage = () => {
           d="M0,64L48,85.3C96,107,192,149,288,160C384,171,480,149,576,122.7C672,96,768,64,864,53.3C960,43,1056,53,1152,80C1248,107,1344,149,1392,170.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
         ></path>
       </svg>
-      <div className="h-full w-full flex flex-col p-4 space-y-12">
+      <div className="h-full w-full flex flex-col p-4 md:px-32 space-y-12">
         <p className="text-3xl text-black font-bold text-left mb-4">Projects</p>
         <div className="h-full p-2 lg:px-24">
           <p className="text-2xl font-bold text-yellow-400">BeatDealers</p>
@@ -183,9 +187,9 @@ const LandingPage = () => {
         <div className="h-full p-2 lg:px-24">
           <p className="text-2xl font-bold text-blue-400">Wishlist</p>
           <p className="p-2">
-            The goal of this project is to lease and sell beats to artist. It
-            includes audio streaming, authentication, payment processing, file
-            uploading and downloading.
+            This is a full stack e-commerce website for creating a list of
+            products for friend and family to gift. It includes CRUD, JWT
+            authentication, protected routes and payment processing with stripe.
           </p>
           <p className="text-xl font-medium text-blue-400 p-2">Screenshots:</p>
           <div className="flex overflow-x-scroll w-full space-x-8 p-4 lg:overflow-hidden lg:justify-center">
@@ -193,16 +197,16 @@ const LandingPage = () => {
             <img src={newproduct} alt="" className="h-96"></img>
           </div>
           <p className="p-4 text-xl font-medium text-center">
-            Technologies used: MERN Stack, Google Cloud Platform, Stripe
+            Technologies used: React, Nodejs, Express, MongoDB, Google Cloud
+            Platform, and Stripe
           </p>
         </div>
 
         <div className="h-full p-2 lg:px-24">
           <p className="text-2xl font-bold text-red-400">Covid Tracker</p>
           <p className="p-2">
-            The goal of this project is to lease and sell beats to artist. It
-            includes audio streaming, authentication, payment processing, file
-            uploading and downloading.
+            The goal of this project is to track and display covid cases across
+            the world. The data is retrieved from cdc api.
           </p>
           <p className="text-xl font-medium text-red-400 p-2">Screenshots:</p>
           <div className="flex overflow-x-scroll w-full space-x-8 p-4 lg:overflow-hidden md:justify-center">
@@ -211,7 +215,7 @@ const LandingPage = () => {
             <img src={map} alt="" className="h-96"></img>
           </div>
           <p className="p-4 text-xl font-medium text-center w-full">
-            Technologies used: MERN Stack, Google Cloud Platform, Stripe
+            Technologies used: MERN Stack, Chart.js,and API
           </p>
         </div>
       </div>
@@ -224,15 +228,23 @@ const LandingPage = () => {
           backgroundSize: "cover",
         }}
       >
-        <div className="py-12">
-          <p className="text-center text-material-blue mb-12 text-2xl font-bold">
+        <div className="py-12 md:px-32">
+          <p className="text-center text-material-blue mb-12 text-3xl font-bold">
             Technologies
           </p>
           <div className="flex flex-col h-full w-full">
-            <div className="flex justify-center items-center w-full h-full mb-8 space-x-7">
-              <img src={html} alt="" className="h-16 bg-white rounded-xl"></img>
+            <div className="flex justify-center items-center w-full h-full mb-8 space-x-7 md:space-x-12">
+              <img
+                src={html}
+                alt=""
+                className="h-16 md:h-20 bg-white rounded-xl"
+              ></img>
 
-              <img src={css} alt="" className="h-16  bg-white rounded-xl"></img>
+              <img
+                src={css}
+                alt=""
+                className="h-16 md:h-20 bg-white rounded-xl"
+              ></img>
               <img
                 src={down}
                 alt=""
@@ -241,14 +253,14 @@ const LandingPage = () => {
 
               <div className="flex flex-col items-center h-full space-y-4">
                 <div className="flex items-center space-x-2">
-                  <img src={bootstrap} alt="" className="h-7 "></img>
+                  <img src={bootstrap} alt="" className="h-7 md:h-12"></img>
                   <p className="text-white font-bold">Bootstrap</p>
                 </div>
                 <div className="flex items-center space-x-2">
                   <img
                     src={mui}
                     alt=""
-                    className="h-7 w-7 rounded-full bg-white"
+                    className="h-7 w-7 rounded-full bg-white md:h-12 md:w-12"
                   ></img>
                   <p className="text-white font-bold">Material-UI</p>
                 </div>
@@ -256,23 +268,23 @@ const LandingPage = () => {
                   <img
                     src={twcss}
                     alt=""
-                    className="h-7 rounded-full bg-white"
+                    className="h-7 rounded-full bg-white md:h-12"
                   ></img>
-                  <p className="text-white font-bold">Tailwind</p>
+                  <p className="text-white font-bold">TailwindCSS</p>
                 </div>
               </div>
             </div>
             <img src={down} alt="" className="h-12"></img>
 
-            <div className="flex items-center p-4 justify-between">
+            <div className="flex items-center p-4 justify-center">
               <div className="flex flex-col items-center justify-center w-full h-full">
-                <img src={js} alt="" className="h-20"></img>
+                <img src={js} alt="" className="h-20 md:h-28"></img>
                 <p className="text-base text-white font-medium">Javascript</p>
               </div>
-              <div className="items-end w-full grid grid-cols-2 justify-items-center content-center pl-16">
+              <div className="items-end w-full grid grid-cols-2 justify-items-center content-center pl-16 md:pl-0">
                 <p className="text-sm text-white h-12 font-bold">Vanilla</p>
                 <p className="text-sm text-white h-12 font-bold">React</p>
-                <p className="text-sm text-white h-12 font-bold">ESNext</p>
+                <p className="text-sm text-white h-12 font-bold">ES6</p>
                 <p className="text-sm text-white h-12 font-bold">AJAX</p>
                 <p className="text-sm text-white h-12 font-bold">JSON</p>
                 <p className="text-sm text-white h-12 font-bold">DOM</p>
@@ -290,10 +302,42 @@ const LandingPage = () => {
             </div>
           </div>
           <div className="w-full h-full p-4 space-y-8">
-            <p className="text-2xl font-bold text-white text-center w-full">Backend</p>
-            <img src={nodejs} alt="mongodb" className="h-24"></img>
-            <img src={mongodb} alt="mongodb" className="h-9 bg-white rounded"></img>
-            <img src={gcloud} alt="mongodb" className="h-24"></img>
+            <div className="flex items-center p-4 justify-center">
+              <div className="grid grid-cols-2 justify-items-center w-full h-full gap-8">
+                <img src={nodejs} alt="mongodb" className="h-24"></img>
+                <img
+                  src={python}
+                  alt="mongodb"
+                  className="h-9 bg-white rounded"
+                ></img>
+                <img
+                  src={mongodb}
+                  alt="mongodb"
+                  className="h-9 bg-white rounded"
+                ></img>
+                <img
+                  src={graphql}
+                  alt="mongodb"
+                  className="h-9 bg-white rounded"
+                ></img>
+                <img src={gcloud} alt="mongodb" className="h-24 bg-white"></img>
+              </div>
+              <div className="flex flex-col w-full h-full items-center space-y-8">
+                <p className="text-xl font-bold">Including:</p>
+                <div className="items-end w-full grid grid-cols-2 justify-items-center content-center pl-16 md:pl-0">
+                  <p className="text-sm text-white h-12 font-bold">NPM</p>
+                  <p className="text-sm text-white h-12 font-bold">Express</p>
+                  <p className="text-sm text-white h-12 font-bold">JWT</p>
+                  <p className="text-sm text-white h-12 font-bold">GraphQL</p>
+                  <p className="text-sm text-white h-12 font-bold">Rest API</p>
+                  <p className="text-sm text-white h-12 font-bold">Socket.IO</p>
+                  <p className="text-sm text-white h-12 font-bold">
+                    Django/Flask
+                  </p>
+                  <p className="text-sm text-white h-12 font-bold">NGINX</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
