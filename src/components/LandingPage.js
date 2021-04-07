@@ -37,6 +37,7 @@ import nodejs from "../assets/nodejs.svg";
 import mongodb from "../assets/mongodb.png";
 import python from "../assets/python.svg";
 import graphql from "../assets/graphql.svg";
+import stripe from "../assets/stripe.svg";
 
 const LandingPage = () => {
   return (
@@ -68,9 +69,12 @@ const LandingPage = () => {
         </div>
         <div className="h-full flex flex-col items-center p-4">
           <p className="mb-2">Need help with your website?</p>
-          <button className="h-12 rounded-xl font-medium bg-material-blue w-28 mb-8">
+          <a
+            href="tel:8132033638"
+            className="h-12 rounded-xl font-medium bg-material-blue w-28 mb-8 flex items-center justify-center"
+          >
             Contact Me
-          </button>
+          </a>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -301,14 +305,20 @@ const LandingPage = () => {
               <p className="text-xl font-bold text-white">Webpack</p>
             </div>
           </div>
-          <div className="w-full h-full p-4 space-y-8">
-            <div className="flex items-center p-4 justify-center">
-              <div className="grid grid-cols-2 justify-items-center w-full h-full gap-8">
-                <img src={nodejs} alt="mongodb" className="h-24"></img>
+          <div className="w-full h-full p-4 space-y-8 pt-24">
+            <div className="flex flex-col md:flex-row items-center p-4 justify-center">
+              <div className="grid grid-cols-2 justify-items-center  w-full h-full gap-8">
+                <img src={nodejs} alt="mongodb" className="h-24 bg-white"></img>
+
                 <img
                   src={python}
-                  alt="mongodb"
+                  alt="python"
                   className="h-9 bg-white rounded"
+                ></img>
+                <img
+                  src={graphql}
+                  alt="graphql"
+                  className="h-24 bg-white rounded"
                 ></img>
                 <img
                   src={mongodb}
@@ -316,15 +326,19 @@ const LandingPage = () => {
                   className="h-9 bg-white rounded"
                 ></img>
                 <img
-                  src={graphql}
-                  alt="mongodb"
-                  className="h-9 bg-white rounded"
+                  src={gcloud}
+                  alt="gcloud"
+                  className="h-24 bg-white rounded"
                 ></img>
-                <img src={gcloud} alt="mongodb" className="h-24 bg-white"></img>
+                <img
+                  src={stripe}
+                  alt="stripe"
+                  className="h-20 bg-white rounded"
+                ></img>
               </div>
-              <div className="flex flex-col w-full h-full items-center space-y-8">
-                <p className="text-xl font-bold">Including:</p>
-                <div className="items-end w-full grid grid-cols-2 justify-items-center content-center pl-16 md:pl-0">
+              <div className="flex flex-col w-full h-full items-center space-y-8 mt-12 md:mt-0">
+                <p className="text-2xl font-bold text-white">Including:</p>
+                <div className="items-center w-full grid grid-cols-2 justify-items-center content-center ">
                   <p className="text-sm text-white h-12 font-bold">NPM</p>
                   <p className="text-sm text-white h-12 font-bold">Express</p>
                   <p className="text-sm text-white h-12 font-bold">JWT</p>
