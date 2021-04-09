@@ -18,73 +18,34 @@ const Drawer = ({ setOpen, authorized, logout }) => {
       onMouseLeave={(e) => setOpen(false)}
     >
       <div className="flex flex-col p-8 space-y-4">
-        <Link
-          to="/"
+        <a
+          href="#home"
           className="text-2xl font-medium h-8 flex items-center"
           onClick={() => setOpen(false)}
         >
           Home
-        </Link>
-        <Link
-          to="/apparel"
+        </a>
+        <a
+          href="#solutions"
           className=" text-2xl font-medium h-8 flex items-center"
           onClick={() => setOpen(false)}
         >
+          {" "}
           Solutions
-        </Link>
-        <Link
-          to="/beats"
+        </a>
+        <a
+          href="#projects"
           className=" text-2xl font-medium h-8 flex items-center"
           onClick={() => setOpen(false)}
         >
           Projects
-        </Link>
-        <Link
-          to="/faqs"
-          className="text-2xl font-medium h-8 flex items-center"
-          onClick={() => setOpen(false)}
-        >
-          Faqs
-        </Link>
+        </a>
         <Link
           to="/faqs"
           className="text-2xl font-medium h-8 flex items-center"
           onClick={() => setOpen(false)}
         >
           About
-        </Link>
-        {authorized ? (
-          <React.Fragment>
-            <Link
-              to="/account"
-              className="text-2xl font-medium h-8 flex items-center"
-              onClick={() => setOpen(false)}
-            >
-              Account
-            </Link>
-            <button
-              className="text-xl font-medium flex items-center"
-              onClick={() => logout()}
-            >
-              Logout
-            </button>
-          </React.Fragment>
-        ) : (
-          <Link
-            to="/login"
-            className="text-xl font-medium h-8 flex items-center"
-            onClick={() => setOpen(false)}
-          >
-            Login/Register
-          </Link>
-        )}
-
-        <Link
-          to="/admin"
-          className="text-xl font-medium"
-          onClick={() => setOpen(false)}
-        >
-          Admin
         </Link>
       </div>
     </div>

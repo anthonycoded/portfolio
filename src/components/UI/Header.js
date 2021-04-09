@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import menu from "../../assets/menu.svg";
 import Drawer from "./Drawer";
@@ -8,7 +9,7 @@ const Header = () => {
 
   return (
     <div className="h-full w-full">
-      <div className="h-12 flex justify-between items-center bg-material-purple w-full px-2 fixed top-0">
+      <div  className="h-12 flex justify-between items-center bg-material-purple w-full px-2 fixed top-0">
         <a href="/">
           <h1 className="pl-4 text-material-blue font-bold text-2xl">
             <p className="text-black">
@@ -16,7 +17,40 @@ const Header = () => {
             </p>
           </h1>
         </a>
-        <button className="" onClick={() => setOpen(!open)}>
+
+        <div className="md:flex hidden space-x-4 px-4">
+          <a
+            href="#home"
+            className="text-xl font-medium h-8 flex items-center"
+            onClick={() => setOpen(false)}
+          >
+            Home
+          </a>
+          <a
+            href="#solutions"
+            className=" text-xl font-medium h-8 flex items-center"
+            onClick={() => setOpen(false)}
+          >
+            {" "}
+            Solutions
+          </a>
+          <a
+            href="#projects"
+            className=" text-xl font-medium h-8 flex items-center"
+            onClick={() => setOpen(false)}
+          >
+            Projects
+          </a>
+          <Link
+            to="/faqs"
+            className="text-xl font-medium h-8 flex items-center"
+            onClick={() => setOpen(false)}
+          >
+            About
+          </Link>
+        </div>
+
+        <button className="md:hidden" onClick={() => setOpen(!open)}>
           <img src={menu} alt="menu" className="h-9"></img>
         </button>
       </div>

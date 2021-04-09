@@ -41,7 +41,10 @@ import stripe from "../assets/stripe.svg";
 
 const LandingPage = () => {
   return (
-    <div className="h-full flex flex-col justify-center items-center mt-8">
+    <div
+      id="home"
+      className="h-full flex flex-col justify-center items-center mt-8"
+    >
       <div className="h-full flex justify-center p-4 pt-8">
         <p className="font-bold text-4xl text-black text-center mt-14 capitalize">
           Hello World, <br></br> my name is{" "}
@@ -118,7 +121,10 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="h-full w-full flex flex-col bg-material-blue p-4 space-y-16 md:px-24 md:py-12">
+      <div
+        id="solutions"
+        className="h-full w-full flex flex-col bg-material-blue p-4 space-y-16 md:px-24 md:py-12"
+      >
         <p className="text-2xl text-black font-bold text-left mb-4">
           Online Solutions
         </p>
@@ -165,7 +171,10 @@ const LandingPage = () => {
           d="M0,64L48,85.3C96,107,192,149,288,160C384,171,480,149,576,122.7C672,96,768,64,864,53.3C960,43,1056,53,1152,80C1248,107,1344,149,1392,170.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
         ></path>
       </svg>
-      <div className="h-full w-full flex flex-col p-4 md:px-32 space-y-12">
+      <div
+        id="projects"
+        className="h-full w-full flex flex-col p-4 md:px-32 space-y-12"
+      >
         <p className="text-3xl text-black font-bold text-left mb-4">Projects</p>
         <div className="h-full p-2 lg:px-24">
           <p className="text-2xl font-bold text-yellow-400">BeatDealers</p>
@@ -308,7 +317,11 @@ const LandingPage = () => {
           <div className="w-full h-full p-4 space-y-8 pt-24">
             <div className="flex flex-col md:flex-row items-center p-4 justify-center">
               <div className="grid grid-cols-2 justify-items-center  w-full h-full gap-8">
-                <img src={nodejs} alt="mongodb" className="h-24 bg-white"></img>
+                <img
+                  src={nodejs}
+                  alt="mongodb"
+                  className="h-24 bg-white rounded"
+                ></img>
 
                 <img
                   src={python}
