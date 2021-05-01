@@ -14,7 +14,7 @@ const Drawer = ({ setOpen, authorized, logout }) => {
 
   return (
     <div
-      className="bg-material-blue h-96 w-72 top-12 right-0 transform flex flex-col fixed rounded-l-xl"
+      className="bg-material-blue h-60 w-72 top-12 right-0 transform flex flex-col fixed rounded-l-xl"
       onMouseLeave={(e) => setOpen(false)}
     >
       <div className="flex flex-col p-8 space-y-4">
