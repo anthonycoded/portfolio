@@ -41,43 +41,51 @@ import stripe from "../assets/stripe.svg";
 
 const LandingPage = () => {
   return (
-    <div
-      id="home"
-      className="h-full flex flex-col justify-center items-center mt-8"
-    >
-      <div className="h-full flex justify-center p-4 pt-8">
-        <p className="font-bold text-4xl text-black text-center mt-14 capitalize">
-          Hello World, <br></br> my name is{" "}
-          <span className="text-material-blue">Shawn</span> barbel
-        </p>
-      </div>
-      <div className="h-full flex flex-col items-center space-y-4 p-4">
-        <img src={avatar} alt="" className="rounded-full h-48 mb-4"></img>
-        <div className="h-full flex flex-col justify-center items-center ">
-          <p className="text-2xl font-bold text-material-purple">
-            Software Developer
+    <div id="home" className="h-full flex flex-col items-center mt-8">
+      <div
+        id="jumbotron"
+        className="flex flex-col lg:flex-row w-full h-full lg:items-center lg:pt-24"
+      >
+        <div className="flex flex-col w-full h-full items-center space-y-20 py-12">
+          <p className="font-bold text-4xl text-black text-center mt-14 capitalize">
+            Hello World, <br></br> my name is{" "}
+            <span className="text-material-blue">Shawn</span> barbel
           </p>
-          <p className="text-xl text-gray-500 font-medium mb-4">
-            Solution Creator
-          </p>
-          <img src={Github} className="h-12 mb-4" alt=""></img>
-          <a
-            href="https://twitter.com/ShawnBarbel?ref_src=twsrc%5Etfw"
-            className="twitter-follow-button"
-            data-size="large"
-            data-show-count="false"
-          >
-            Follow @ShawnBarbel
-          </a>
+          <img
+            src={avatar}
+            alt=""
+            className="rounded-full h-48 w-48 mb-4"
+          ></img>
         </div>
-        <div className="h-full flex flex-col items-center p-4">
-          <p className="mb-2">Need help with your website?</p>
-          <a
-            href="tel:8132033638"
-            className="h-12 rounded-xl font-medium bg-material-blue w-28 mb-8 flex items-center justify-center"
-          >
-            Contact Me
-          </a>
+
+        <div className="h-full w-full flex flex-col items-center justify-center space-y-4 p-4 lg:py-12">
+          <div className="h-full flex flex-col justify-center items-center lg:mt-14">
+            <p className="text-2xl font-bold text-material-purple">
+              Software Developer
+            </p>
+            <p className="text-xl text-gray-500 font-medium mb-4 lg:text-left">
+              Solution Creator
+            </p>
+            <img src={Github} className="h-12 mb-4 animate-pulse" alt=""></img>
+            <a
+              href="https://twitter.com/ShawnBarbel?ref_src=twsrc%5Etfw"
+              target="_blank"
+              className="twitter-follow-button"
+              data-size="large"
+              data-show-count="false"
+            >
+              Follow @ShawnBarbel
+            </a>
+          </div>
+          <div className="h-full flex flex-col items-center p-4">
+            <p className="mb-2">Need help with your website?</p>
+            <a
+              href="tel:8132033638"
+              className="h-12 rounded-xl font-medium bg-material-blue w-28 mb-8 flex items-center justify-center"
+            >
+              Contact Me
+            </a>
+          </div>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
