@@ -8,7 +8,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="h-full w-full absolute z-10">
+    <div className="w-full absolute z-10">
       <div className="h-12 flex justify-between items-center bg-material-purple w-full px-2 fixed top-0 shadow-2xl">
         <a href="/">
           <h1 className="pl-4 text-material-blue font-bold text-2xl">
