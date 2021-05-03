@@ -9,7 +9,7 @@ const App = () => {
   return (
     <div className="h-full">
       <Router>
-        <Header className="display-block"></Header>
+        <Header></Header>
         <Switch>
           <Route path="/">
             <LandingPage></LandingPage>
