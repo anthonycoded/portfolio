@@ -41,10 +41,10 @@ import stripe from "../assets/stripe.svg";
 
 const LandingPage = () => {
   return (
-    <div id="home" className="h-full flex flex-col items-center mt-8">
+    <div id="home" className="h-full flex flex-col items-center mt-8 z-0">
       <div
         id="jumbotron"
-        className="flex flex-col lg:flex-row w-full h-full lg:items-center lg:pt-24"
+        className="flex flex-col lg:flex-row w-full h-full lg:items-center lg:py-24"
       >
         <div className="flex flex-col w-full h-full items-center space-y-20 py-12">
           <p className="font-bold text-4xl text-black text-center mt-14 capitalize">
@@ -60,7 +60,7 @@ const LandingPage = () => {
 
         <div className="h-full w-full flex flex-col items-center justify-center space-y-4 p-4 lg:py-12">
           <div className="h-full flex flex-col justify-center items-center lg:mt-14">
-            <p className="text-2xl font-bold text-material-purple">
+            <p className="text-3xl font-bold text-material-purple">
               Software Developer
             </p>
             <p className="text-xl text-gray-500 font-medium mb-4 lg:text-left">
@@ -95,11 +95,11 @@ const LandingPage = () => {
           d="M0,128L48,144C96,160,192,192,288,176C384,160,480,96,576,69.3C672,43,768,53,864,90.7C960,128,1056,192,1152,224C1248,256,1344,256,1392,256L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
       </svg>
-      <div className="h-full w-full bg-material-purple flex flex-col items-start p-8 space-y-9 md:px-24">
-        <div className=" h-full ">
-          <p className="text-3xl text-left w-full mb-4 font-bold">
-            What I do is simple
-          </p>
+      <div className="h-full w-full bg-material-purple flex flex-col items-start p-4 space-y-9 md:px-24 py-24 lg:pb-32">
+        <p className="text-3xl text-left w-full mb-4 font-bold">
+          What I do is simple
+        </p>
+        <div className="h-full px-4">
           <p className="text-white font-medium text-xl mb-32 w-72 text-left">
             I Create online business solutions that empowers a company to not
             only grow but also thrive in todays competitve world.
@@ -131,9 +131,9 @@ const LandingPage = () => {
 
       <div
         id="solutions"
-        className="h-full w-full flex flex-col bg-material-blue p-4 space-y-16 md:px-24 md:py-12"
+        className="h-full w-full flex flex-col bg-material-blue p-4 py-24 space-y-16 md:px-24 md:py-32"
       >
-        <p className="text-2xl text-black font-bold text-left mb-4">
+        <p className="text-3xl text-black font-bold text-left mb-4">
           Online Solutions
         </p>
         <div className="w-full h-full grid grid-cols-2 justify-content-center gap-12 pb-12">
@@ -181,10 +181,10 @@ const LandingPage = () => {
       </svg>
       <div
         id="projects"
-        className="h-full w-full flex flex-col p-4 md:px-32 space-y-12"
+        className="h-full w-full flex flex-col p-4 md:px-32 space-y-12 pb-32"
       >
         <p className="text-3xl text-black font-bold text-left mb-4">Projects</p>
-        <div className="h-full p-2 lg:px-24">
+        <div className="h-full p-2 lg:px-24 py-12">
           <p className="text-2xl font-bold text-yellow-400">BeatDealers</p>
           <p className="p-2">
             The goal of this project is to lease and sell beats to artist. It
@@ -205,7 +205,7 @@ const LandingPage = () => {
           </p>
         </div>
 
-        <div className="h-full p-2 lg:px-24">
+        <div className="h-full p-2 lg:px-24 py-12">
           <p className="text-2xl font-bold text-blue-400">Wishlist</p>
           <p className="p-2">
             This is a full stack e-commerce website for creating a list of
@@ -223,7 +223,7 @@ const LandingPage = () => {
           </p>
         </div>
 
-        <div className="h-full p-2 lg:px-24">
+        <div className="h-full p-2 lg:px-24 py-12">
           <p className="text-2xl font-bold text-red-400">Covid Tracker</p>
           <p className="p-2">
             The goal of this project is to track and display covid cases across
@@ -249,12 +249,12 @@ const LandingPage = () => {
           backgroundSize: "cover",
         }}
       >
-        <div className="py-12 md:px-32">
+        <div className="py-12 lg:py-32 md:px-32">
           <p className="text-center text-material-blue mb-12 text-3xl font-bold">
             Technologies
           </p>
           <div className="flex flex-col h-full w-full">
-            <div className="flex justify-center items-center w-full h-full mb-8 space-x-7 md:space-x-12">
+            <div className="flex justify-center items-center w-full h-full mb-8 space-x-7 md:space-x-24 py-24">
               <img
                 src={html}
                 alt=""
@@ -272,7 +272,7 @@ const LandingPage = () => {
                 className="h-12 transform -rotate-90"
               ></img>
 
-              <div className="flex flex-col items-center h-full space-y-4">
+              <div className="flex flex-col items-center h-full space-y-12">
                 <div className="flex items-center space-x-2">
                   <img src={bootstrap} alt="" className="h-7 md:h-12"></img>
                   <p className="text-white font-bold">Bootstrap</p>
@@ -297,12 +297,12 @@ const LandingPage = () => {
             </div>
             <img src={down} alt="" className="h-12"></img>
 
-            <div className="flex items-center p-4 justify-center">
+            <div className="flex items-center p-4 justify-center py-12">
               <div className="flex flex-col items-center justify-center w-full h-full">
                 <img src={js} alt="" className="h-20 md:h-28"></img>
                 <p className="text-base text-white font-medium">Javascript</p>
               </div>
-              <div className="items-end w-full grid grid-cols-2 justify-items-center content-center pl-16 md:pl-0">
+              <div className="items-end w-full grid grid-cols-2 justify-items-center content-center">
                 <p className="text-sm text-white h-12 font-bold">Vanilla</p>
                 <p className="text-sm text-white h-12 font-bold">React</p>
                 <p className="text-sm text-white h-12 font-bold">ES6</p>
@@ -313,11 +313,11 @@ const LandingPage = () => {
             </div>
             <img src={down} alt="" className="h-12 mb-8"></img>
 
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center p-12">
               <img
                 src={webpackcube}
                 alt=""
-                className="h-20 animate-spin-slow duration-400"
+                className="h-20 lg:h-24 animate-spin-slow duration-400"
               ></img>
               <p className="text-xl font-bold text-white">Webpack</p>
             </div>
