@@ -66,11 +66,18 @@ const LandingPage = () => {
             <p className="text-xl text-gray-500 font-medium mb-4 lg:text-left">
               Solution Creator
             </p>
-            <img src={Github} className="h-12 mb-4 animate-pulse" alt=""></img>
+            <a href="https://github.com/anthonycoded" target="_blank">
+              <img
+                src={Github}
+                className="h-12 mb-4 animate-pulse"
+                alt=""
+              ></img>
+            </a>
+
             <a
               href="https://twitter.com/ShawnBarbel?ref_src=twsrc%5Etfw"
               target="_blank"
-              className="twitter-follow-button"
+              className="twitter-follow-button bg-blue-400"
               data-size="large"
               data-show-count="false"
             >
@@ -250,7 +257,7 @@ const LandingPage = () => {
         }}
       >
         <div className="py-12 lg:py-32 md:px-32">
-          <p className="text-center text-material-blue mb-12 text-3xl font-bold">
+          <p className="text-center text-white mb-12 text-3xl font-bold">
             Technologies
           </p>
           <div className="flex flex-col h-full w-full">
@@ -297,18 +304,18 @@ const LandingPage = () => {
             </div>
             <img src={down} alt="" className="h-12"></img>
 
-            <div className="flex items-center p-4 justify-center py-12">
-              <div className="flex flex-col items-center justify-center w-full h-full">
+            <div className="flex items-center space-x-32 p-4 justify-center py-12 lg:py-32">
+              <div className="flex flex-col items-center justify-center  h-full">
                 <img src={js} alt="" className="h-20 md:h-28"></img>
                 <p className="text-base text-white font-medium">Javascript</p>
               </div>
-              <div className="items-end w-full grid grid-cols-2 justify-items-center content-center">
-                <p className="text-sm text-white h-12 font-bold">Vanilla</p>
-                <p className="text-sm text-white h-12 font-bold">React</p>
-                <p className="text-sm text-white h-12 font-bold">ES6</p>
-                <p className="text-sm text-white h-12 font-bold">AJAX</p>
-                <p className="text-sm text-white h-12 font-bold">JSON</p>
-                <p className="text-sm text-white h-12 font-bold">DOM</p>
+              <div className="items-end grid grid-cols-2 justify-items-center content-center gap-x-10 gap-y-8 text-sm lg:text-xl lg:pl-8 text-white font-bold">
+                <p>Vanilla</p>
+                <p>React</p>
+                <p>ES6</p>
+                <p>AJAX</p>
+                <p>JSON</p>
+                <p className="">DOM</p>
               </div>
             </div>
             <img src={down} alt="" className="h-12 mb-8"></img>
@@ -317,7 +324,7 @@ const LandingPage = () => {
               <img
                 src={webpackcube}
                 alt=""
-                className="h-20 lg:h-24 animate-spin-slow duration-400"
+                className="h-20 lg:h-32 animate-spin-slow duration-400"
               ></img>
               <p className="text-xl font-bold text-white">Webpack</p>
             </div>
