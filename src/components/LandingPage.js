@@ -38,6 +38,8 @@ import mongodb from "../assets/mongodb.png";
 import python from "../assets/python.svg";
 import graphql from "../assets/graphql.svg";
 import stripe from "../assets/stripe.svg";
+import jnmponds from "../assets/jnmponds.png";
+import snw from "../assets/snw.png";
 
 const LandingPage = () => {
   return (
@@ -54,7 +56,7 @@ const LandingPage = () => {
           <img
             src={avatar}
             alt=""
-            className="rounded-full h-48 w-48 mb-4"
+            className="rounded-full h-48 w-48 mb-4 shadow-lg"
           ></img>
         </div>
 
@@ -77,7 +79,7 @@ const LandingPage = () => {
             <a
               href="https://twitter.com/ShawnBarbel?ref_src=twsrc%5Etfw"
               target="_blank"
-              className="twitter-follow-button bg-blue-400"
+              className="twitter-follow-button bg-blue-400 p-2 rounded-lg shadow-lg"
               data-size="large"
               data-show-count="false"
             >
@@ -85,12 +87,12 @@ const LandingPage = () => {
             </a>
           </div>
           <div className="h-full flex flex-col items-center p-4">
-            <p className="mb-2">Need help with your website?</p>
+            <p className="mt-4 mb-2">Need help with your website?</p>
             <a
               href="tel:8132033638"
-              className="h-12 rounded-xl font-medium bg-material-blue w-28 mb-8 flex items-center justify-center"
+              className="h-9 rounded-xl shadow-lg font-medium bg-material-blue w-28 mb-8 flex items-center justify-center"
             >
-              Contact Me
+              Call Me
             </a>
           </div>
         </div>
@@ -247,6 +249,48 @@ const LandingPage = () => {
           </p>
         </div>
       </div>
+
+      <div className="w-full h-full flex flex-col p-4">
+        <p className="text-3xl font-bold mb-12">Websites by me</p>
+
+        <div className="space-y-12 p-4">
+          <a
+            href="http://jnmpondmanagement.com"
+            target="_blank"
+            className="flex flex-col w-full h-full "
+          >
+            <p className="text-2xl mb-4">J&amp;M Pond Management </p>
+            <div
+              className="h-60 w-full shadow-xl rounded"
+              style={{
+                backgroundImage: `url(${jnmponds})`,
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain",
+              }}
+            ></div>
+          </a>
+
+          <a
+            href="http://socketsnwrenches.com"
+            target="_blank"
+            className="flex flex-col w-full h-full "
+          >
+            <p className="text-2xl mb-4">
+              Sockets &amp; Wrenches | Tampa Auto Repair{" "}
+            </p>
+            <div
+              className="h-60 w-full shadow-xl rounded"
+              style={{
+                backgroundImage: `url(${snw})`,
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "contain",
+              }}
+            ></div>
+          </a>
+        </div>
+      </div>
       <div
         className="h-full w-full"
         style={{
@@ -331,7 +375,7 @@ const LandingPage = () => {
           </div>
           <div className="w-full h-full p-4 space-y-8 pt-24">
             <div className="flex flex-col md:flex-row items-center p-4 justify-center">
-              <div className="grid grid-cols-2 justify-items-center  w-full h-full gap-8">
+              <div className="grid grid-cols-2 justify-items-center items-center justify-center w-full h-full gap-8">
                 <img
                   src={nodejs}
                   alt="mongodb"
