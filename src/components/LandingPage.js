@@ -138,6 +138,16 @@ const LandingPage = () => {
         </div>
       </div>
 
+      <div className="w-full flex flex-col items-center h-48 justify-center space-y-8">
+        <p className="text-xl font-bold">Ready to empower your business?</p>
+        <a
+          href="tel:8132033638"
+          className="bg-green-400 animate-bounce px-4 py-2 rounded-lg shadow-lg"
+        >
+          Give me a call{" "}
+        </a>
+      </div>
+
       <div
         id="solutions"
         className="h-full w-full flex flex-col bg-material-blue p-4 py-24 space-y-16 md:px-24 md:py-32"
@@ -190,10 +200,10 @@ const LandingPage = () => {
       </svg>
       <div
         id="projects"
-        className="h-full w-full flex flex-col p-4 md:px-32 space-y-12 pb-32"
+        className="h-full w-full flex flex-col p-4 lg:px-12 xl:px-32 space-y-12 pb-16"
       >
         <p className="text-3xl text-black font-bold text-left mb-4">Projects</p>
-        <div className="h-full p-2 lg:px-24 py-12">
+        <div className="h-full p-2 md:px-12 lg:px-24 py-12">
           <p className="text-2xl font-bold text-yellow-400">BeatDealers</p>
           <p className="p-2">
             The goal of this project is to lease and sell beats to artist. It
@@ -214,7 +224,7 @@ const LandingPage = () => {
           </p>
         </div>
 
-        <div className="h-full p-2 lg:px-24 py-12">
+        <div className="h-full p-2 md:px-12 lg:px-24 py-12">
           <p className="text-2xl font-bold text-blue-400">Wishlist</p>
           <p className="p-2">
             This is a full stack e-commerce website for creating a list of
@@ -232,7 +242,7 @@ const LandingPage = () => {
           </p>
         </div>
 
-        <div className="h-full p-2 lg:px-24 py-12">
+        <div className="h-full p-2 md:px-12 lg:px-24 py-12">
           <p className="text-2xl font-bold text-red-400">Covid Tracker</p>
           <p className="p-2">
             The goal of this project is to track and display covid cases across
@@ -250,47 +260,45 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="w-full h-full flex flex-col p-4">
+      <div className="w-full h-full flex flex-col p-4 bg-material-blue py-24">
         <p className="text-3xl font-bold mb-12">Websites by me</p>
 
-        <div className="space-y-12 p-4">
+        <div className="space-y-32 lg:space-y-0 p-4 w-full h-full lg:h-96 lg:flex lg:items-center lg:space-x-24 lg:justify-around">
           <a
             href="http://jnmpondmanagement.com"
             target="_blank"
-            className="flex flex-col w-full h-full "
+            className="flex flex-col w-full lg:w-96 h-full "
           >
             <p className="text-2xl mb-4">J&amp;M Pond Management </p>
-            <div
-              className="h-60 w-full shadow-xl rounded"
-              style={{
-                backgroundImage: `url(${jnmponds})`,
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-              }}
-            ></div>
+            <img
+              src={jnmponds}
+              className="w-full h-full rounded-md shadow-xl"
+            ></img>
           </a>
 
           <a
             href="http://socketsnwrenches.com"
             target="_blank"
-            className="flex flex-col w-full h-full "
+            className="flex flex-col w-full lg:w-96 h-full "
           >
             <p className="text-2xl mb-4">
               Sockets &amp; Wrenches | Tampa Auto Repair{" "}
             </p>
-            <div
-              className="h-60 w-full shadow-xl rounded"
-              style={{
-                backgroundImage: `url(${snw})`,
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "contain",
-              }}
-            ></div>
+            <img src={snw} className="w-full h-full rounded-md shadow-xl"></img>
           </a>
         </div>
       </div>
+
+      <div className="w-full flex flex-col items-center h-48 justify-center space-y-8">
+        <p className="text-xl font-bold">Ready to empower your business?</p>
+        <a
+          href="tel:8132033638"
+          className="bg-green-400 animate-bounce px-4 py-2 rounded-lg shadow-lg"
+        >
+          Give me a call{" "}
+        </a>
+      </div>
+
       <div
         className="h-full w-full"
         style={{
@@ -309,13 +317,13 @@ const LandingPage = () => {
               <img
                 src={html}
                 alt=""
-                className="h-16 md:h-20 bg-white rounded-xl"
+                className="h-12 sm:h-16 md:h-20 bg-white rounded-xl"
               ></img>
 
               <img
                 src={css}
                 alt=""
-                className="h-16 md:h-20 bg-white rounded-xl"
+                className="h-12 sm:h-16 md:h-20 bg-white rounded-xl"
               ></img>
               <img
                 src={down}
@@ -355,11 +363,11 @@ const LandingPage = () => {
               </div>
               <div className="items-end grid grid-cols-2 justify-items-center content-center gap-x-10 gap-y-8 text-sm lg:text-xl lg:pl-8 text-white font-bold">
                 <p>Vanilla</p>
+                <p>JQuery</p>
                 <p>React</p>
-                <p>ES6</p>
+                <p>ESNext</p>
                 <p>AJAX</p>
                 <p>JSON</p>
-                <p className="">DOM</p>
               </div>
             </div>
             <img src={down} alt="" className="h-12 mb-8"></img>
@@ -371,58 +379,6 @@ const LandingPage = () => {
                 className="h-20 lg:h-32 animate-spin-slow duration-400"
               ></img>
               <p className="text-xl font-bold text-white">Webpack</p>
-            </div>
-          </div>
-          <div className="w-full h-full p-4 space-y-8 pt-24">
-            <div className="flex flex-col md:flex-row items-center p-4 justify-center">
-              <div className="grid grid-cols-2 justify-items-center items-center justify-center w-full h-full gap-8">
-                <img
-                  src={nodejs}
-                  alt="mongodb"
-                  className="h-24 bg-white rounded"
-                ></img>
-
-                <img
-                  src={python}
-                  alt="python"
-                  className="h-9 bg-white rounded"
-                ></img>
-                <img
-                  src={graphql}
-                  alt="graphql"
-                  className="h-24 bg-white rounded"
-                ></img>
-                <img
-                  src={mongodb}
-                  alt="mongodb"
-                  className="h-9 bg-white rounded"
-                ></img>
-                <img
-                  src={gcloud}
-                  alt="gcloud"
-                  className="h-24 bg-white rounded"
-                ></img>
-                <img
-                  src={stripe}
-                  alt="stripe"
-                  className="h-20 bg-white rounded"
-                ></img>
-              </div>
-              <div className="flex flex-col w-full h-full items-center space-y-8 mt-12 md:mt-0">
-                <p className="text-2xl font-bold text-white">Including:</p>
-                <div className="items-center w-full grid grid-cols-2 justify-items-center content-center ">
-                  <p className="text-sm text-white h-12 font-bold">NPM</p>
-                  <p className="text-sm text-white h-12 font-bold">Express</p>
-                  <p className="text-sm text-white h-12 font-bold">JWT</p>
-                  <p className="text-sm text-white h-12 font-bold">GraphQL</p>
-                  <p className="text-sm text-white h-12 font-bold">Rest API</p>
-                  <p className="text-sm text-white h-12 font-bold">Socket.IO</p>
-                  <p className="text-sm text-white h-12 font-bold">
-                    Django/Flask
-                  </p>
-                  <p className="text-sm text-white h-12 font-bold">NGINX</p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
