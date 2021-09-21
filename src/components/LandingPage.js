@@ -40,6 +40,10 @@ import graphql from "../assets/graphql.svg";
 import stripe from "../assets/stripe.svg";
 import jnmponds from "../assets/jnmponds.png";
 import snw from "../assets/snw.png";
+import android from "../assets/android app.png";
+import android1 from "../assets/android app1.png";
+import apple from "../assets/applelogo.svg";
+import androidlogo from "../assets/androidlogo.png";
 
 const LandingPage = () => {
   return (
@@ -139,7 +143,7 @@ const LandingPage = () => {
       </div>
 
       <div className="w-full flex flex-col items-center h-48 justify-center space-y-8">
-        <p className="text-xl font-bold">Ready to empower your business?</p>
+        <p className="text-2xl font-bold">Ready to empower your business?</p>
         <a
           href="tel:8132033638"
           className="bg-green-400 animate-bounce px-4 py-2 rounded-lg shadow-lg"
@@ -198,6 +202,7 @@ const LandingPage = () => {
           d="M0,64L48,85.3C96,107,192,149,288,160C384,171,480,149,576,122.7C672,96,768,64,864,53.3C960,43,1056,53,1152,80C1248,107,1344,149,1392,170.7L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
         ></path>
       </svg>
+
       <div
         id="projects"
         className="h-full w-full flex flex-col p-4 lg:px-12 xl:px-32 space-y-12 pb-16"
@@ -260,22 +265,56 @@ const LandingPage = () => {
         </div>
       </div>
 
-      <div className="w-full h-full flex flex-col p-4 bg-material-blue py-24">
-        <p className="text-3xl font-bold mb-12">Websites by me</p>
+      <div className="bg-gray-400 flex flex-col items-center w-full py-12 px-2">
+        <p className="w-full text-2xl font-semibold mb-12">
+          I make Mobile Apps too
+        </p>
+        <p className="w-full text-xl mb-4">The restaraunt App</p>
+        <div className="flex overflow-x-scroll px-4 space-x-4">
+          <div
+            className=" h-96 w-48"
+            style={{
+              backgroundImage: `url("${android}")`,
+              backgroundPosition: "center",
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+            }}
+          ></div>
+          <div
+            className=" h-96 w-48"
+            style={{
+              backgroundImage: `url("${android1}")`,
+              backgroundPosition: "center",
+              backgroundSize: "contain",
+              backgroundRepeat: "no-repeat",
+            }}
+          ></div>
+        </div>
+        <p className="p-4 font-light py-8 text-xl">
+          This is a simple app built using React Native. It displays restaraunts
+          and data from Yelp's business API. You can view the source code for
+          this app on my Github
+        </p>
+      </div>
 
-        <div className="space-y-32 lg:space-y-0 p-4 w-full h-full lg:h-96 lg:flex lg:items-center lg:space-x-24 lg:justify-around">
+      <div className="w-full h-full flex flex-col p-4 bg-material-blue py-12 lg:py-24">
+        <p className="text-3xl font-bold mb-12 w-full ">Websites by me</p>
+        <div className="flex flex-col items-center lg:flex-row lg:justify-around">
           <a
             href="http://jnmpondmanagement.com"
             target="_blank"
-            className="flex flex-col w-full lg:w-96 h-full "
+            className="flex flex-col w-full items-center lg:w-96 h-96 "
           >
             <p className="text-2xl mb-4">J&amp;M Pond Management </p>
-            <img
-              src={jnmponds}
-              className="w-full h-full rounded-md shadow-xl"
-            ></img>
+            <div
+              className="h-60 w-96"
+              style={{
+                backgroundImage: `url("${jnmponds}")`,
+                backgroundPosition: "center",
+                backgroundSize: "contain",
+              }}
+            ></div>
           </a>
-
           <a
             href="http://socketsnwrenches.com"
             target="_blank"
@@ -284,13 +323,20 @@ const LandingPage = () => {
             <p className="text-2xl mb-4">
               Sockets &amp; Wrenches | Tampa Auto Repair{" "}
             </p>
-            <img src={snw} className="w-full h-full rounded-md shadow-xl"></img>
+            <div
+              className="h-60 w-96"
+              style={{
+                backgroundImage: `url("${snw}")`,
+                backgroundPosition: "center",
+                backgroundSize: "cover",
+              }}
+            ></div>
           </a>
         </div>
       </div>
 
       <div className="w-full flex flex-col items-center h-48 justify-center space-y-8">
-        <p className="text-xl font-bold">Ready to empower your business?</p>
+        <p className="text-2xl font-bold">Ready to empower your business?</p>
         <a
           href="tel:8132033638"
           className="bg-green-400 animate-bounce px-4 py-2 rounded-lg shadow-lg"
