@@ -1,6 +1,5 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
       colors: {
@@ -9,6 +8,12 @@ module.exports = {
       },
       animation: {
         "spin-slow": "spin 3s linear infinite",
+      },
+      transitionProperty: {
+        height: "height",
+      },
+      screens: {
+        landscape: { raw: "(max-height: 414px),(min-width:600px)" },
       },
     },
   },

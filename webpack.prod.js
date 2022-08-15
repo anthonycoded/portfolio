@@ -1,15 +1,12 @@
-  
-const { merge } = require("webpack-merge");
-const common = require("./webpack.common.js");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { HotModuleReplacementPlugin } = require("webpack");
 const path = require("path");
 
-module.exports = merge(common, {
+module.exports = {
   mode: "production",
   entry: path.join(__dirname, "src", "index.js"),
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "build/javascript"),
     filename: "bundle.js",
   },
   plugins: [
@@ -46,14 +43,19 @@ module.exports = merge(common, {
       },
       {
         test: /\.css$/i,
-        include: path.resolve(__dirname, "src"),
-        exclude: /node_modules/,
+
         use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
+        test: /\.(png|svg|jpg|gif|pdf)$/,
+        type: "asset/inline",
       },
     ],
   },
-});
+  resolve: {
+    fallback: {
+      "react/jsx-runtime": "react/jsx-runtime.js",
+      "react/jsx-dev-runtime": "react/jsx-dev-runtime.js",
+    },
+  },
+};

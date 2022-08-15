@@ -1,6 +1,6 @@
 const path = require("path");
 const webpack = require("webpack");
-const Dotenv = require("dotenv-webpack");
+
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { HotModuleReplacementPlugin } = require("webpack");
 const { merge } = require("webpack-merge");
@@ -10,7 +10,7 @@ module.exports = merge(common, {
   mode: "development",
   entry: path.join(__dirname, "src", "index.js"),
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "build/javascript"),
     filename: "bundle.js",
   },
   plugins: [
@@ -19,15 +19,14 @@ module.exports = merge(common, {
       chunkFilename: "[id].css",
     }),
     new HotModuleReplacementPlugin(),
-    new Dotenv(),
   ],
   devServer: {
     open: true,
-    clientLogLevel: "silent",
-    contentBase: "./build",
     historyApiFallback: true,
     port: 3000,
-    hot: true,
+    static: "./build",
+    liveReload: true,
+    hot: false,
   },
   devtool: "source-map",
   module: {
@@ -57,14 +56,19 @@ module.exports = merge(common, {
       },
       {
         test: /\.css$/i,
-        include: path.resolve(__dirname, "src"),
-        exclude: /node_modules/,
+
         use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: "asset/resource",
+        test: /\.(png|svg|jpg|gif|pdf)$/,
+        type: "asset/inline",
       },
     ],
+  },
+  resolve: {
+    fallback: {
+      "react/jsx-runtime": "react/jsx-runtime.js",
+      "react/jsx-dev-runtime": "react/jsx-dev-runtime.js",
+    },
   },
 });
