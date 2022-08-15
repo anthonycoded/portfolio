@@ -1,23 +1,18 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+//import { Provider } from "react-redux";
+//import { store } from "./store/store";
+import AppWrapper from "./AppWrapper";
+//import { AuthProvider } from "./utils/authFunctions";
+import "./App.css";
 
-import "./app.css";
-import Header from "./components/UI/Header";
-import LandingPage from "./components/LandingPage";
-
-const App = () => {
+function App() {
   return (
-    <div className="h-full">
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route path="/">
-            <LandingPage></LandingPage>
-          </Route>
-        </Switch>
-      </Router>
-    </div>
+    // <Provider store={store}>
+    //   <AuthProvider>
+    <AppWrapper></AppWrapper>
+    //   </AuthProvider>
+    // </Provider>
   );
-};
+}
 
 export default App;
