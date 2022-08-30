@@ -18,7 +18,7 @@ const Header = () => {
           </h1>
         </a>
 
-        <div className="md:flex hidden space-x-4 px-4">
+        {/* <div className="md:flex hidden space-x-4 px-4">
           <a
             href="#home"
             className="text-xl font-medium h-8 flex items-center"
@@ -52,9 +52,9 @@ const Header = () => {
 
         <button className="md:hidden" onClick={() => setOpen(!open)}>
           <img src={menu} alt="menu" className="h-9"></img>
-        </button>
+        </button>*/}
       </div>
-      {open ? <Drawer setOpen={setOpen}></Drawer> : undefined}
+      {/* {open ? <Drawer setOpen={setOpen}></Drawer> : undefined}  */}
     </div>
   );
 };

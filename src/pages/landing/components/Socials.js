@@ -4,7 +4,7 @@ import twitter from "../../../assets/logos/twitter.png";
 
 const Socials = () => {
   return (
-    <div className="w-4/5 items-center flex justify-around ">
+    <div className="w-full items-center flex justify-center  space-x-8">
       <a href="https://github.com/anthonycoded" target="_blank">
         <img src={Github} className="h-12 mb-4 animate-pulse" alt=""></img>
       </a>

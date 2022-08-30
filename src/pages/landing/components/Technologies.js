@@ -8,16 +8,21 @@ import bootstrap from "../../../assets/Bootstrap_logo.svg";
 import webpackcube from "../../../assets/webpackcube.svg";
 import down from "../../../assets/down-arrow.svg";
 import wavebg from "../../../assets/wavebg.svg";
+import apple from "../../../assets/logos/apple.png";
+import google from "../../../assets/logos/google.png";
+import backend from "../../../assets/backend.png";
+import tools from "../../../assets/tools.png";
+import ui from "../../../assets/ui.png";
 
 const Technologies = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
   function toggleShow() {
     setShow(!show);
   }
   return (
     <div
-      className="h-full w-full"
+      className="h-full w-full pb-48 items-center flex flex-col"
       style={{
         backgroundImage: `url(${wavebg})`,
         backgroundPosition: "center",
@@ -25,23 +30,19 @@ const Technologies = () => {
         backgroundSize: "cover",
       }}
     >
-      <div className="py-7 px-2 lg:py-32 md:px-32">
+      <div className="py-7 px-2 lg:py-32 md:px-32 items-center w-full flex flex-col">
         <p className="text-center text-white mb-12 text-3xl font-bold">
           Technologies
         </p>
 
-        <div className="bg-white w-full p-2">
-          <div
-            className={`"transition-height ease-in-out duration-300 overflow-hidden flex flex-col justify-start w-full items-center border-b border-gray-600 mb-2 " ${
-              show ? "h-40" : "h-12"
-            }`}
-          >
+        <div className="bg-white w-full p-2 rounded lg:w-4/5 xl:w-3/5">
+          <div className="transition-height ease-in-out duration-300 overflow-hidden flex flex-col justify-start w-full items-center border-b border-gray-600 mb-2">
             <div className="flex w-full justify-between items-center h-12 mb-4">
               <div className="flex space-x-3 h-full items-center">
                 <p className="text-lg font-medium">HTML</p>
                 <p className="text-lg font-medium">CSS</p>
               </div>
-              <img src={down} alt="" className="h-7 "></img>
+              <img src={ui} alt="" className="h-10 md:h-14"></img>
             </div>
             <p className="w-full text-md text-left mb-2">Including: </p>
             <div className="flex justify-around w-full items-end pb-4 px-4 flex-1">
@@ -80,7 +81,7 @@ const Technologies = () => {
             <div className="w-full flex justify-between items-center h-12">
               <p className="text-lg font-medium">JavaScript</p>
               <div className="flex">
-                <img src={js} alt="" className="h-10 md:h-28"></img>
+                <img src={js} alt="" className="h-10 md:h-14"></img>
               </div>
             </div>
             <p className="text-md text-left w-full mb-2">Including: </p>
@@ -102,7 +103,16 @@ const Technologies = () => {
             <div className="w-full flex justify-between items-center h-12 mb-4">
               <p className="text-lg font-medium">Mobile Apps</p>
               <div className="flex">
-                <img src={js} alt="" className="h-10 md:h-28"></img>
+                <img
+                  src={apple}
+                  alt=""
+                  className="h-24 w-24 md:h-28 object-contain"
+                ></img>
+                <img
+                  src={google}
+                  alt=""
+                  className="h-24 w-32 md:h-28 object-contain"
+                ></img>
               </div>
             </div>
             <p className="text-md text-left w-full mb-2">Utilizing: </p>
@@ -122,7 +132,7 @@ const Technologies = () => {
             <div className="w-full flex justify-between items-center h-12 mb-4">
               <p className="text-lg font-medium">Backend</p>
               <div className="flex">
-                <img src={js} alt="" className="h-10 md:h-28"></img>
+                <img src={backend} alt="" className="h-10 md:h-14"></img>
               </div>
             </div>
             <p className="text-md text-left w-full mb-2">Including: </p>
@@ -144,7 +154,7 @@ const Technologies = () => {
             <div className="w-full flex justify-between items-center h-12 mb-4">
               <p className="text-lg font-medium">Tools</p>
               <div className="flex">
-                <img src={js} alt="" className="h-10 md:h-28"></img>
+                <img src={tools} alt="" className="h-10 md:h-14"></img>
               </div>
             </div>
             <p className="text-md text-left w-full mb-2">Including: </p>
@@ -152,7 +162,7 @@ const Technologies = () => {
               <p className="w-1/3 text-center">Github</p>
               <p className="w-1/3 text-center">VS Code</p>
               <p className="w-1/3 text-center">Postman</p>
-              <p className="w-1/3 text-center">ESNext</p>
+              <p className="w-1/3 text-center">TestFlight</p>
               <p className="w-1/3 text-center">AJAX</p>
               <p className="w-1/3 text-center">JSON</p>
             </div>
