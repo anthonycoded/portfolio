@@ -7,6 +7,7 @@ import orderfood from "../../../assets/order-food.svg";
 import socialmedia from "../../../assets/social-media.svg";
 import chat from "../../../assets/speech-bubble.svg";
 import authentication from "../../../assets/authentication.svg";
+import { motion, Variants } from "framer-motion";
 
 const Solutions = () => {
   return (
@@ -19,10 +20,15 @@ const Solutions = () => {
           Online Solutions
         </p>
         <div className="w-full  grid grid-cols-2 justify-content-center gap-12  ">
-          <div className="flex flex-col justify-center">
+          <motion.div
+            className="flex flex-col justify-center"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
             <img src={cart} alt="" className="h-14"></img>
             <p className="text-center text-xl ">E-commerce</p>
-          </div>
+          </motion.div>
+
           <div className="flex flex-col justify-center">
             <img src={content} alt="" className="h-14"></img>
             <p className="text-center text-xl ">Content Management</p>
