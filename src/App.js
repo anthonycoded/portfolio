@@ -3,7 +3,7 @@ import React from "react";
 //import { store } from "./store/store";
 import AppWrapper from "./AppWrapper";
 //import { AuthProvider } from "./utils/authFunctions";
-import "./App.css";
+import "./app.css";
 
 function App() {
   return (
