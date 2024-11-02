@@ -19,6 +19,11 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.tsx?$/, // Match .ts and .tsx files
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
+      {
         test: /\.(jsx|js)$/,
         include: path.resolve(__dirname, "src"),
         exclude: /node_modules/,

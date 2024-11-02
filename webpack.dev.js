@@ -32,7 +32,7 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.(jsx|js)$/,
+        test: /\.(jsx|js|tsx)$/,
         include: path.resolve(__dirname, "src"),
         exclude: /node_modules/,
         use: [
@@ -66,6 +66,7 @@ module.exports = merge(common, {
     ],
   },
   resolve: {
+    extensions: [".js", ".jsx", ".ts", ".tsx"],
     fallback: {
       "react/jsx-runtime": "react/jsx-runtime.js",
       "react/jsx-dev-runtime": "react/jsx-dev-runtime.js",

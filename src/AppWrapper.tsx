@@ -9,7 +9,7 @@ import Homepage from "./pages/landing/LandingPage";
 const AppWrapper = () => {
   return (
     <>
-      <Header className="display-block"></Header>
+      <Header></Header>
 
       <div className="pt-12">
         <Routes>
