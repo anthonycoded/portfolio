@@ -11,13 +11,12 @@ const AppWrapper = () => {
     <>
       <Header></Header>
 
-      <div className="pt-12">
-        <Routes>
-          <Route path="/">
-            <Route index element={<Homepage />}></Route>
-          </Route>
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/">
+          <Route index element={<Homepage />}></Route>
+        </Route>
+      </Routes>
+
       <Footer></Footer>
     </>
   );
