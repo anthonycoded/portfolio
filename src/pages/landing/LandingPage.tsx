@@ -1,13 +1,13 @@
 import React from "react";
-import Banner from "./components/Banner";
-import Socials from "./components/Socials";
-import WhatIDo from "./components/WhatIDo";
-import Solutions from "./components/Solutions";
-import Apps from "./components/Apps";
-import CallToAction from "./components/CallToAction";
-import Websites from "./components/Websites";
-import Technologies from "./components/Technologies";
-import ChatBot from "./components/ChatBot";
+import Banner from "./sections/Banner";
+import Socials from "./sections/Socials";
+import WhatIDo from "./sections/WhatIDo";
+import Solutions from "./sections/Solutions";
+import Apps from "./sections/Apps";
+import CallToAction from "./sections/CallToAction";
+import Websites from "./sections/Websites";
+import Technologies from "./sections/Technologies";
+import ChatBot from "./chat/ChatBot";
 
 const LandingPage = () => {
   return (
