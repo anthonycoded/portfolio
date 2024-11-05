@@ -11,11 +11,8 @@ import ChatBot from "./components/ChatBot";
 
 const LandingPage = () => {
   return (
-    <div
-      id="home"
-      className="h-full flex flex-col items-center w-full mt-12 z-0 overflow-hidden "
-    >
-      <div className="w-full flex flex-col h-full  items-center py-24">
+    <div className="relative flex flex-col items-center w-full pt-12 z-0">
+      <div className="w-full flex flex-col h-full  items-center ">
         <Banner></Banner>
         <Socials></Socials>
         <CallToAction></CallToAction>
@@ -26,7 +23,6 @@ const LandingPage = () => {
             d="M0,128L48,144C96,160,192,192,288,176C384,160,480,96,576,69.3C672,43,768,53,864,90.7C960,128,1056,192,1152,224C1248,256,1344,256,1392,256L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           ></path>
         </svg>
-        <ChatBot />
 
         <WhatIDo></WhatIDo>
         {/* <CallToAction></CallToAction> */}
@@ -45,6 +41,8 @@ const LandingPage = () => {
         {/* <Websites></Websites> */}
         <Technologies></Technologies>
       </div>
+
+      <ChatBot />
     </div>
   );
 };
