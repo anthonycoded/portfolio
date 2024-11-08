@@ -1,7 +1,11 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const Drawer = ({ setOpen, authorized, logout }) => {
+type Props = {
+  setOpen: (arg0: boolean) => void;
+};
+
+const Drawer = ({ setOpen }: Props) => {
   const closeDrawer = () => {
     setOpen(false);
   };

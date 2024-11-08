@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
-import menu from "../assets/menu.svg";
 import Drawer from "./Drawer";
 
 const Header = () => {
