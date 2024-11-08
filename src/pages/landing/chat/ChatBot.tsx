@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import "react-chat-elements/dist/main.css";
 import { MessageBox, MessageList } from "react-chat-elements";
@@ -7,7 +7,7 @@ import Api from "../../../utils/api";
 import ChatThread from "./ChatThread";
 
 // Define the base MessageProps type
-interface MessageProps {
+export interface MessageProps {
   id: string | number;
   position?: string;
   text?: string;
@@ -17,30 +17,46 @@ interface MessageProps {
   dateString?: string;
   avatar?: string;
   titleColor?: string;
-  forwarded?: boolean;
-  replyButton?: boolean;
-  removeButton?: boolean;
   status?: "waiting" | "sent" | "received" | "read";
-  statusTitle?: string;
-  notch?: boolean;
-  copiableDate?: boolean;
-  retracted?: boolean;
-  className?: string;
-  letterItem?: { id: string; letter: React.ReactChild };
   reply?: { message: string; photoURL: string } | any;
   type?: string;
 }
 
-// Extend MessageProps to create Message type
-interface Message extends MessageProps {
-  // Add any additional fields specific to Message here
-  // Example:
-  isEditable?: boolean; // Add a custom property for message edit functionality
-  reactions?: string[]; // Array of emojis representing reactions to the message
-}
-
 const ChatBot = () => {
-  const [messages, setMessages] = useState<Message[]>([]);
+  const [messages, setMessages] = useState<MessageProps[]>([
+    // {
+    //   id: 0,
+    //   text: "Hello! I’m Zaneri, here to assist you with any questions about Shawn Barbel. What would you like to know?",
+    //   title: "Zaneri Assistant",
+    //   position: "left",
+    //   type: "text",
+    //   titleColor: "#aa00ff",
+    // },
+    {
+      id: 1,
+      text: (
+        <div className="">
+          Here are a few questions you could ask:
+          <ul
+            style={{
+              listStyleType: "disc",
+              marginLeft: "1.2em",
+              marginTop: "0.5em",
+            }}
+            className="text-sm"
+          >
+            <li>Tell me about Shawn's background.</li>
+            <li>What are some of Shawn's recent projects?</li>
+            <li>Can you share Shawn's key skills?</li>
+          </ul>
+        </div>
+      ) as any, // Casting as `any` to allow JSX in `text`
+      title: "Zaneri Assistant",
+      position: "system",
+      type: "text",
+      titleColor: "#aa00ff",
+    },
+  ]);
   const [input, setInput] = useState("");
   const [isOpen, setIsOpen] = useState(false); // State to toggle chat window
   const [loading, setLoading] = useState(false); // New loading state
@@ -48,7 +64,7 @@ const ChatBot = () => {
 
   const sendMessage = async () => {
     if (!input.trim()) return; // Prevent sending empty messages
-    const userMessage: Message = {
+    const userMessage: MessageProps = {
       title: "Visitor",
       text: input,
       position: "right",
@@ -66,7 +82,7 @@ const ChatBot = () => {
         question: input,
       });
       console.log(response.data.response);
-      const botMessage: Message = {
+      const botMessage: MessageProps = {
         title: "Zaneri Assistant",
         text: response.data.response,
         type: "text",
@@ -92,6 +108,7 @@ const ChatBot = () => {
       sendMessage();
     }
   };
+
   return (
     <>
       {isOpen ? (
@@ -99,18 +116,20 @@ const ChatBot = () => {
           className={`z-10 fixed h-full pb-12 justify-end flex flex-col items-end w-full bg-black bg-opacity-50`}
         >
           <div className="w-full h-full relative">
-            <div className="w-4/5 h-4/5 absolute bottom-4 right-0 flex flex-col items-center bg-white mr-4 rounded-md shadow-md ">
-              <div className="bg-material-purple w-full h-16 flex flex-col items-center relative rounded-t-md">
+            <div className="w-4/5 h-4/5 absolute bottom-4 right-0 flex flex-col items-center bg-gray-100 mr-4 rounded-lg shadow-md ">
+              <div className="bg-material-purple w-full h-16 flex flex-col items-center justify-center relative rounded-t-lg shadow-md">
                 <button
                   onClick={toggleChat}
                   className="absolute top-4 right-4 z-10 flex items-center justify-center"
                 >
                   <p className="text-2xl">X</p>
                 </button>
-                <p>Zaneri</p>
+                <p className="text-white text-lg font-semibold">
+                  Zaneri&trade;
+                </p>
+                <p className="text-white">AI Powered Chatbot</p>
               </div>
               <ChatThread messages={messages} />
-
               <div className="p-4 w-full flex flex-col">
                 <input
                   type="text"
@@ -138,10 +157,10 @@ const ChatBot = () => {
         </div>
       ) : (
         <button
-          className=" fixed bottom-4 right-4 px-4 py-2 text-xl bg-blue-500 text-white rounded-full shadow-lg hover:bg-blue-600 transition duration-300 "
+          className=" fixed bottom-4 right-4 px-12 hover:border hover:border-white py-2 text-xl bg-material-purple  text-white rounded-full shadow-lg hover:bg-blue-600 transition duration-300 "
           onClick={toggleChat}
         >
-          Ask Zaneri
+          Ask Zaneri&trade;
           <p className="text-sm font-light ">Powered by AI.</p>
         </button>
       )}
