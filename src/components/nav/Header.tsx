@@ -12,8 +12,8 @@ const Header = () => {
   }, [open]);
 
   return (
-    <div className="w-full h-12 fixed   z-10">
-      <div className="h-12 flex justify-between items-center bg-material-purple w-full px-2 fixed top-0 shadow-2xl">
+    <div className="w-full fixed   z-10">
+      <div className="h-12 flex justify-between items-center bg-material-purple w-full px-2 fixed top-0 shadow-xl rounded-b-sm">
         <a href="/">
           <h1 className="pl-4 text-material-blue font-bold text-2xl">
             <p className="text-black">
