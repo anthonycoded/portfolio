@@ -32,6 +32,7 @@ const ChatBot = () => {
     //   type: "text",
     //   titleColor: "#aa00ff",
     // },
+
     {
       id: 1,
       text: (
@@ -93,6 +94,19 @@ const ChatBot = () => {
       setMessages((prev) => [...prev, botMessage]);
     } catch (error) {
       console.error("Error:", error);
+      const systemMessage = {
+        id: 1,
+        text: (
+          <div className="">
+            Something is not right....Zaneri may be asleep.Zzzzzzzzzz
+          </div>
+        ) as any, // Casting as `any` to allow JSX in `text`
+        title: "Zaneri Assistant",
+        position: "system",
+        type: "text",
+        titleColor: "#aa00ff",
+      };
+      setMessages((prev) => [...prev, systemMessage]);
     } finally {
       setLoading(false);
     }
@@ -116,7 +130,7 @@ const ChatBot = () => {
           className={`z-10 fixed h-full pb-12 justify-end flex flex-col items-end w-full bg-black bg-opacity-50`}
         >
           <div className="w-full h-full relative">
-            <div className="w-4/5 h-4/5 absolute bottom-4 right-0 flex flex-col items-center bg-gray-100 mr-4 rounded-lg shadow-md ">
+            <div className="w-4/5 md:w-[500px] lg:w-[400px] h-4/5 absolute bottom-4 right-0 flex flex-col items-center bg-gray-100 mr-4 rounded-lg shadow-md ">
               <div className="bg-material-purple w-full h-16 flex flex-col items-center justify-center relative rounded-t-lg shadow-md">
                 <button
                   onClick={toggleChat}
@@ -157,7 +171,7 @@ const ChatBot = () => {
         </div>
       ) : (
         <button
-          className=" fixed bottom-4 right-4 px-12 hover:border hover:border-white py-2 text-xl bg-material-purple  text-white rounded-full shadow-lg hover:bg-blue-600 transition duration-300 "
+          className=" fixed bottom-4 right-4 px-12 hover:border hover:border-white py-2 text-xl bg-material-purple  text-white rounded-full shadow-lg animate-bounce hover:bg-blue-600 transition duration-300 "
           onClick={toggleChat}
         >
           Ask Zaneri&trade;
