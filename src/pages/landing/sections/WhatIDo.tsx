@@ -1,12 +1,12 @@
-import React from "react";
-import business from "../../../assets/undraw_business.svg";
-import cube from "../../../assets/solutions.svg";
-import winners from "../../../assets/winners.svg";
-import down from "../../../assets/down-arrow.svg";
+import React from 'react';
+import business from '../../../assets/undraw_business.svg';
+import cube from '../../../assets/solutions.svg';
+import winners from '../../../assets/winners.svg';
+import down from '../../../assets/down-arrow.svg';
 
 const WhatIDo = () => {
   return (
-    <div className="h-full w-full  bg-material-purple flex flex-col items-center p-4 mb-8  py-6 lg:pb-32 ">
+    <div className="h-full w-full  bg-material-purple flex flex-col items-center p-4  ">
       <div className="w-full lg:w-5/6 xl:w-4/5 flex flex-col items-center">
         <p className="text-2xl text-left w-full font-bold mb-2">
           What I do is simple
