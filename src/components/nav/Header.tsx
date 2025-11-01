@@ -17,7 +17,7 @@ const Header = () => {
       <div className="h-12 flex justify-between items-center bg-material-purple w-full px-2 fixed top-0 shadow-xl rounded-b-sm">
         <a href="/">
           <h1 className="pl-4 text-material-blue font-bold text-2xl">
-            <p className="text-black">
+            <p className="text-white">
               <span className="text-material-blue">Shawn</span>Barbel
             </p>
           </h1>
@@ -29,7 +29,7 @@ const Header = () => {
             <div key={i} className="relative group">
               <Link
                 to={route.route}
-                className="text-xl font-medium h-8 flex items-center"
+                className="text-lg font-medium h-8 flex items-center text-white"
                 onClick={() => setOpen(false)}
                 onMouseEnter={() =>
                   route.children ? setSubmenuOpen(true) : setSubmenuOpen(false)
@@ -51,7 +51,7 @@ const Header = () => {
                       key={j}
                       href={subroute.route}
                       target="_blank"
-                      className="block text-lg font-normal px-4 py-2 hover:bg-gray-200 text-nowrap"
+                      className="block text-lg font-normal text-white px-4 py-2 hover:bg-gray-200 text-nowrap"
                       onClick={() => setOpen(false)}
                     >
                       {subroute.title}
