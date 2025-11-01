@@ -23,10 +23,10 @@ const Solutions = () => {
   return (
     <div
       id="solutions"
-      className="h-4/5  w-full flex flex-col items-center bg-material-blue p-4 md:py-4 pb-12"
+      className="h-4/5  w-full flex flex-col items-center bg-material-purple p-4 md:py-4 pb-12"
     >
       <div className="w-full h-full flex flex-col items-center lg:w-5/6 xl:w-4/5">
-        <p className="text-2xl  font-semibold text-left mb-4 w-full">
+        <p className="text-2xl  font-semibold text-left mb-4 w-full text-white">
           Online Solutions
         </p>
         <div className="w-full  grid grid-cols-2 justify-content-center gap-12  ">
@@ -38,7 +38,7 @@ const Solutions = () => {
               whileTap={{ scale: 0.9 }}
             >
               <img src={item.icon} alt="" className="h-14"></img>
-              <p className="text-center text-xl ">{item.name}</p>
+              <p className="text-center text-xl  text-white ">{item.name}</p>
             </motion.div>
           ))}
         </div>

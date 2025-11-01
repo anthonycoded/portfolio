@@ -8,7 +8,7 @@ const Projects = () => {
     <div className={`${constants.layout} bg-gray-200 py-4`}>
       <a
         href="/projects"
-        className="font-semibold w-full text-left text-lg px-4 underline mb-4"
+        className="text-2xl  font-semibold text-left mb-4 w-full underline"
       >
         Projects
       </a>
