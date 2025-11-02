@@ -5,10 +5,10 @@ import ProjectCard from '../../projects/ProjectCard';
 
 const Projects = () => {
   return (
-    <div className={`${constants.layout} bg-gray-200 py-4`}>
+    <div className={`${constants.layout} py-4`}>
       <a
         href="/projects"
-        className="text-2xl  font-semibold text-left mb-4 w-full underline"
+        className="text-2xl font-semibold text-left mb-4 underline"
       >
         Projects
       </a>

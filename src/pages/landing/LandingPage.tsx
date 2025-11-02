@@ -13,7 +13,7 @@ import Projects from './sections/Projects';
 const LandingPage = () => {
   return (
     <>
-      <div className="static flex flex-col items-center w-full bg-gray-200 z-0">
+      <div className="static flex flex-col items-center w-full bg-gray-100 z-0">
         <div className="w-full flex flex-col h-full  items-center ">
           <Banner></Banner>
           <Socials></Socials>

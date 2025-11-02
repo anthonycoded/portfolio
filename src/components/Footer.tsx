@@ -68,7 +68,7 @@ const Footer = () => {
 
       <div className="flex-1 w-full flex flex-col items-center justify-center text-white">
         <h2>&copy; 2024 Shawn Barbel. All Rights Reserved</h2>
-        <p>Shawn&apos;s Giftlist&trade;</p>
+        {/* <p>Shawn&apos;s Giftlist&trade;</p> */}
       </div>
     </footer>
   );
